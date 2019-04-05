@@ -17,27 +17,27 @@
     End Sub
 
     Private Sub PCentarl_MouseHover(sender As Object, e As EventArgs) Handles PCentarl.MouseHover
-        Do While FrmPrincipal.PMenu.Width > 9
-            FrmPrincipal.PMenu.Width -= 5
-            System.Threading.Thread.Sleep(50)
-            FrmPrincipal.PbxTipoPrestamo.Visible = False
-        Loop
+        'Do While FrmPrincipal.PMenu.Width > 9
+        ' FrmPrincipal.PMenu.Width -= 5
+        ' System.Threading.Thread.Sleep(50)
+        ' FrmPrincipal.PbxTipoPrestamo.Visible = False
+        ' Loop
     End Sub
 
 
     Private Sub GroupBox1_MouseHover(sender As Object, e As EventArgs) Handles GroupBox1.MouseHover
-        Do While FrmPrincipal.PMenu.Width > 9
-            FrmPrincipal.PMenu.Width -= 5
-            System.Threading.Thread.Sleep(50)
-            FrmPrincipal.PbxTipoPrestamo.Visible = False
-        Loop
+        ' Do While FrmPrincipal.PMenu.Width > 9
+        ' FrmPrincipal.PMenu.Width -= 5
+        ' System.Threading.Thread.Sleep(50)
+        ' FrmPrincipal.PbxTipoPrestamo.Visible = False
+        ' Loop
 
     End Sub
 
     Private Sub BtnCerrar_Click_1(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Close()
-        FrmPrincipal.LblTitulo.Text = ""
-        FrmPrincipal.InsertarFormularioEnPanel(New FrmBlanco)
+        ' FrmPrincipal.LblTitulo.Text = ""
+        ' FrmPrincipal.InsertarFormularioEnPanel(New FrmBlanco)
 
     End Sub
 End Class
