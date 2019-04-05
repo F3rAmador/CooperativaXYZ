@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class FrmTipoPrestamo
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -74,6 +74,7 @@ Partial Class Form1
         Me.LsvTipoPrestamo.TabIndex = 11
         Me.LsvTipoPrestamo.UseCompatibleStateImageBehavior = False
         Me.LsvTipoPrestamo.View = System.Windows.Forms.View.Details
+        Me.LsvTipoPrestamo.Visible = False
         '
         'ChIdPrestamo
         '
