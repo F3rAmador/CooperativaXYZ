@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection.vb" />
     <Compile Include="FrmTipoPrestamo.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +125,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LogoCooperativa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-nuevo-documento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar-archivo-opcion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Formularios\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
