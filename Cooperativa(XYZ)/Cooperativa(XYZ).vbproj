@@ -74,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Connection.vb" />
+    <Compile Include="Formularios\FrmNacionalidad.Designer.vb">
+      <DependentUpon>FrmNacionalidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmNacionalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmSocio.Designer.vb">
       <DependentUpon>FrmSocio.vb</DependentUpon>
     </Compile>
