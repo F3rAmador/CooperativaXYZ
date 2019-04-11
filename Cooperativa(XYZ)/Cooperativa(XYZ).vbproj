@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -74,6 +77,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.vb" />
+    <Compile Include="FrmNacionalidad.Designer.vb">
+      <DependentUpon>FrmNacionalidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNacionalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmTipoPrestamo.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +107,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmNacionalidad.resx">
+      <DependentUpon>FrmNacionalidad.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTipoPrestamo.resx">
       <DependentUpon>FrmTipoPrestamo.vb</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +121,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

@@ -28,6 +28,9 @@ Partial Class FrmTipoPrestamo
         Me.LsvTipoPrestamo = New System.Windows.Forms.ListView()
         Me.ChIdPrestamo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChPrestamo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CmsOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItemEditar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChkVer = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BtnCancelar = New System.Windows.Forms.Button()
@@ -40,14 +43,11 @@ Partial Class FrmTipoPrestamo
         Me.TxtIdTipoPrestamo = New System.Windows.Forms.TextBox()
         Me.TxtTipoPrestamo = New System.Windows.Forms.TextBox()
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.CmsOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ToolStripMenuItemEditar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItemEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.PCentarl.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsOpciones.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.CmsOpciones.SuspendLayout()
         Me.SuspendLayout()
         '
         'PCentarl
@@ -97,6 +97,25 @@ Partial Class FrmTipoPrestamo
         '
         Me.ChPrestamo.Text = "Préstamo"
         Me.ChPrestamo.Width = 200
+        '
+        'CmsOpciones
+        '
+        Me.CmsOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemEditar, Me.ToolStripMenuItemEliminar})
+        Me.CmsOpciones.Name = "CmsOpciones"
+        Me.CmsOpciones.Size = New System.Drawing.Size(118, 48)
+        '
+        'ToolStripMenuItemEditar
+        '
+        Me.ToolStripMenuItemEditar.Name = "ToolStripMenuItemEditar"
+        Me.ToolStripMenuItemEditar.Size = New System.Drawing.Size(117, 22)
+        Me.ToolStripMenuItemEditar.Text = "Editar"
+        '
+        'ToolStripMenuItemEliminar
+        '
+        Me.ToolStripMenuItemEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ToolStripMenuItemEliminar.Name = "ToolStripMenuItemEliminar"
+        Me.ToolStripMenuItemEliminar.Size = New System.Drawing.Size(117, 22)
+        Me.ToolStripMenuItemEliminar.Text = "Eliminar"
         '
         'ChkVer
         '
@@ -245,25 +264,6 @@ Partial Class FrmTipoPrestamo
         '
         Me.EpMensaje.ContainerControl = Me
         '
-        'CmsOpciones
-        '
-        Me.CmsOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemEditar, Me.ToolStripMenuItemEliminar})
-        Me.CmsOpciones.Name = "CmsOpciones"
-        Me.CmsOpciones.Size = New System.Drawing.Size(118, 48)
-        '
-        'ToolStripMenuItemEditar
-        '
-        Me.ToolStripMenuItemEditar.Name = "ToolStripMenuItemEditar"
-        Me.ToolStripMenuItemEditar.Size = New System.Drawing.Size(117, 22)
-        Me.ToolStripMenuItemEditar.Text = "Editar"
-        '
-        'ToolStripMenuItemEliminar
-        '
-        Me.ToolStripMenuItemEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ToolStripMenuItemEliminar.Name = "ToolStripMenuItemEliminar"
-        Me.ToolStripMenuItemEliminar.Size = New System.Drawing.Size(117, 22)
-        Me.ToolStripMenuItemEliminar.Text = "Eliminar"
-        '
         'FrmTipoPrestamo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -277,10 +277,10 @@ Partial Class FrmTipoPrestamo
         Me.PCentarl.ResumeLayout(False)
         Me.PCentarl.PerformLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsOpciones.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.CmsOpciones.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
