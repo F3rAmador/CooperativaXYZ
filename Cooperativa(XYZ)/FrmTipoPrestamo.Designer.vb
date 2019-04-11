@@ -28,7 +28,9 @@ Partial Class FrmTipoPrestamo
         Me.LsvTipoPrestamo = New System.Windows.Forms.ListView()
         Me.ChIdPrestamo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChPrestamo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChkVer = New System.Windows.Forms.CheckBox()
+        Me.CmsOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItemEditar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnCerrar = New System.Windows.Forms.Button()
@@ -40,14 +42,11 @@ Partial Class FrmTipoPrestamo
         Me.TxtIdTipoPrestamo = New System.Windows.Forms.TextBox()
         Me.TxtTipoPrestamo = New System.Windows.Forms.TextBox()
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.CmsOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ToolStripMenuItemEditar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItemEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.PCentarl.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsOpciones.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.CmsOpciones.SuspendLayout()
         Me.SuspendLayout()
         '
         'PCentarl
@@ -55,7 +54,6 @@ Partial Class FrmTipoPrestamo
         Me.PCentarl.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.PCentarl.Controls.Add(Me.PbxLogo)
         Me.PCentarl.Controls.Add(Me.LsvTipoPrestamo)
-        Me.PCentarl.Controls.Add(Me.ChkVer)
         Me.PCentarl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PCentarl.Location = New System.Drawing.Point(0, 165)
         Me.PCentarl.Name = "PCentarl"
@@ -75,7 +73,6 @@ Partial Class FrmTipoPrestamo
         '
         'LsvTipoPrestamo
         '
-        Me.LsvTipoPrestamo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
         Me.LsvTipoPrestamo.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdPrestamo, Me.ChPrestamo})
         Me.LsvTipoPrestamo.ContextMenuStrip = Me.CmsOpciones
         Me.LsvTipoPrestamo.FullRowSelect = True
@@ -86,7 +83,6 @@ Partial Class FrmTipoPrestamo
         Me.LsvTipoPrestamo.TabIndex = 11
         Me.LsvTipoPrestamo.UseCompatibleStateImageBehavior = False
         Me.LsvTipoPrestamo.View = System.Windows.Forms.View.Details
-        Me.LsvTipoPrestamo.Visible = False
         '
         'ChIdPrestamo
         '
@@ -98,16 +94,24 @@ Partial Class FrmTipoPrestamo
         Me.ChPrestamo.Text = "Préstamo"
         Me.ChPrestamo.Width = 200
         '
-        'ChkVer
+        'CmsOpciones
         '
-        Me.ChkVer.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ChkVer.AutoSize = True
-        Me.ChkVer.Location = New System.Drawing.Point(705, 6)
-        Me.ChkVer.Name = "ChkVer"
-        Me.ChkVer.Size = New System.Drawing.Size(70, 17)
-        Me.ChkVer.TabIndex = 12
-        Me.ChkVer.Text = "Ver Todo"
-        Me.ChkVer.UseVisualStyleBackColor = True
+        Me.CmsOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemEditar, Me.ToolStripMenuItemEliminar})
+        Me.CmsOpciones.Name = "CmsOpciones"
+        Me.CmsOpciones.Size = New System.Drawing.Size(118, 48)
+        '
+        'ToolStripMenuItemEditar
+        '
+        Me.ToolStripMenuItemEditar.Name = "ToolStripMenuItemEditar"
+        Me.ToolStripMenuItemEditar.Size = New System.Drawing.Size(117, 22)
+        Me.ToolStripMenuItemEditar.Text = "Editar"
+        '
+        'ToolStripMenuItemEliminar
+        '
+        Me.ToolStripMenuItemEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.ToolStripMenuItemEliminar.Name = "ToolStripMenuItemEliminar"
+        Me.ToolStripMenuItemEliminar.Size = New System.Drawing.Size(117, 22)
+        Me.ToolStripMenuItemEliminar.Text = "Eliminar"
         '
         'GroupBox1
         '
@@ -238,31 +242,13 @@ Partial Class FrmTipoPrestamo
         Me.TxtTipoPrestamo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtTipoPrestamo.Location = New System.Drawing.Point(478, 60)
         Me.TxtTipoPrestamo.Name = "TxtTipoPrestamo"
+        Me.TxtTipoPrestamo.ReadOnly = True
         Me.TxtTipoPrestamo.Size = New System.Drawing.Size(223, 29)
         Me.TxtTipoPrestamo.TabIndex = 11
         '
         'EpMensaje
         '
         Me.EpMensaje.ContainerControl = Me
-        '
-        'CmsOpciones
-        '
-        Me.CmsOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemEditar, Me.ToolStripMenuItemEliminar})
-        Me.CmsOpciones.Name = "CmsOpciones"
-        Me.CmsOpciones.Size = New System.Drawing.Size(118, 48)
-        '
-        'ToolStripMenuItemEditar
-        '
-        Me.ToolStripMenuItemEditar.Name = "ToolStripMenuItemEditar"
-        Me.ToolStripMenuItemEditar.Size = New System.Drawing.Size(117, 22)
-        Me.ToolStripMenuItemEditar.Text = "Editar"
-        '
-        'ToolStripMenuItemEliminar
-        '
-        Me.ToolStripMenuItemEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.ToolStripMenuItemEliminar.Name = "ToolStripMenuItemEliminar"
-        Me.ToolStripMenuItemEliminar.Size = New System.Drawing.Size(117, 22)
-        Me.ToolStripMenuItemEliminar.Text = "Eliminar"
         '
         'FrmTipoPrestamo
         '
@@ -275,12 +261,11 @@ Partial Class FrmTipoPrestamo
         Me.Name = "FrmTipoPrestamo"
         Me.Text = "Form1"
         Me.PCentarl.ResumeLayout(False)
-        Me.PCentarl.PerformLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsOpciones.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.CmsOpciones.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -290,7 +275,6 @@ Partial Class FrmTipoPrestamo
     Friend WithEvents LsvTipoPrestamo As ListView
     Friend WithEvents ChIdPrestamo As ColumnHeader
     Friend WithEvents ChPrestamo As ColumnHeader
-    Friend WithEvents ChkVer As CheckBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents BtnCerrar As Button
     Friend WithEvents Label4 As Label
