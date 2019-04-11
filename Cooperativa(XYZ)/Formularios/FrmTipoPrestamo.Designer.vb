@@ -31,7 +31,6 @@ Partial Class FrmTipoPrestamo
         Me.CmsOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItemEditar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItemEliminar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ChkVer = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnCerrar = New System.Windows.Forms.Button()
@@ -55,7 +54,6 @@ Partial Class FrmTipoPrestamo
         Me.PCentarl.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.PCentarl.Controls.Add(Me.PbxLogo)
         Me.PCentarl.Controls.Add(Me.LsvTipoPrestamo)
-        Me.PCentarl.Controls.Add(Me.ChkVer)
         Me.PCentarl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PCentarl.Location = New System.Drawing.Point(0, 165)
         Me.PCentarl.Name = "PCentarl"
@@ -116,17 +114,6 @@ Partial Class FrmTipoPrestamo
         Me.ToolStripMenuItemEliminar.Name = "ToolStripMenuItemEliminar"
         Me.ToolStripMenuItemEliminar.Size = New System.Drawing.Size(117, 22)
         Me.ToolStripMenuItemEliminar.Text = "Eliminar"
-        '
-        'ChkVer
-        '
-        Me.ChkVer.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ChkVer.AutoSize = True
-        Me.ChkVer.Location = New System.Drawing.Point(705, 6)
-        Me.ChkVer.Name = "ChkVer"
-        Me.ChkVer.Size = New System.Drawing.Size(70, 17)
-        Me.ChkVer.TabIndex = 12
-        Me.ChkVer.Text = "Ver Todo"
-        Me.ChkVer.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -275,7 +262,6 @@ Partial Class FrmTipoPrestamo
         Me.Name = "FrmTipoPrestamo"
         Me.Text = "Form1"
         Me.PCentarl.ResumeLayout(False)
-        Me.PCentarl.PerformLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsOpciones.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
@@ -290,7 +276,6 @@ Partial Class FrmTipoPrestamo
     Friend WithEvents LsvTipoPrestamo As ListView
     Friend WithEvents ChIdPrestamo As ColumnHeader
     Friend WithEvents ChPrestamo As ColumnHeader
-    Friend WithEvents ChkVer As CheckBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents BtnCerrar As Button
     Friend WithEvents Label4 As Label
