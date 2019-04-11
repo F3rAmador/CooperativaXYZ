@@ -73,11 +73,23 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connection.vb" />
-    <Compile Include="FrmTipoPrestamo.vb">
+    <Compile Include="Conexion\Connection.vb" />
+    <Compile Include="Formularios\FrmSocio.Designer.vb">
+      <DependentUpon>FrmSocio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmSocio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTipoPrestamo.Designer.vb">
+    <Compile Include="Formularios\FrmSolicitudPrestamo.Designer.vb">
+      <DependentUpon>FrmSolicitudPrestamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmSolicitudPrestamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTipoPrestamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTipoPrestamo.Designer.vb">
       <DependentUpon>FrmTipoPrestamo.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -98,7 +110,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmTipoPrestamo.resx">
+    <EmbeddedResource Include="Formularios\FrmSocio.resx">
+      <DependentUpon>FrmSocio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmSolicitudPrestamo.resx">
+      <DependentUpon>FrmSolicitudPrestamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTipoPrestamo.resx">
       <DependentUpon>FrmTipoPrestamo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -138,8 +156,6 @@
   <ItemGroup>
     <None Include="Resources\guardar-archivo-opcion.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formularios\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -290,4 +290,5 @@ Public Class FrmTipoPrestamo
         TxtTipoPrestamo.Text = LsvTipoPrestamo.FocusedItem.SubItems(1).Text
     End Sub
 
+
 End Class
