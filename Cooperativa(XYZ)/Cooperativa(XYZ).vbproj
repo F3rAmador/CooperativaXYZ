@@ -114,6 +114,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="test1.Designer.vb">
+      <DependentUpon>test1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test1.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Formularios\FrmSocio.resx">
