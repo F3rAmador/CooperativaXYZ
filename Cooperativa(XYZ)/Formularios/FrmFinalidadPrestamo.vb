@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class FrmNacionalidad
+Public Class FrmFinalidadPrestamo
 
     ' Habilita los botones
     Private Sub HabilitarBotones(ByVal Nuevo As Boolean, ByVal Guardar As Boolean, ByVal Modificar As Boolean, ByVal Cancelar As Boolean)
@@ -12,7 +12,7 @@ Public Class FrmNacionalidad
     End Sub
 
     ' Seleccionamos los botones a habilitar
-    Private Sub FrmNacionalidad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmFinalidadPrestamos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         HabilitarBotones(True, False, False, False)
         MostrarTodo()
 
@@ -25,14 +25,14 @@ Public Class FrmNacionalidad
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
         HabilitarBotones(False, True, False, True)
         InvestigarCorrelativo()
-        TxtNacionalidad.ReadOnly = False
+        TxtFinalidad.ReadOnly = False
 
     End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
 
         If ValidarTextBox() = True Then
-            GuardarNacionalidad()
+            GuardarFinalidad()
             Limpiar()
             HabilitarBotones(True, False, False, False)
             MostrarTodo()
@@ -43,7 +43,7 @@ Public Class FrmNacionalidad
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
 
         If ValidarTextBox() = True Then
-            ActualizarNacionalidad()
+            ActualizarFinalidad()
             Limpiar()
             HabilitarBotones(True, False, False, False)
             MostrarTodo()
@@ -58,11 +58,11 @@ Public Class FrmNacionalidad
     End Sub
 
     Private Sub Limpiar()
-        TxtIdNacionalidad.Text = Nothing
-        TxtNacionalidad.Text = Nothing
+        TxtIdFinalidad.Text = Nothing
+        TxtFinalidad.Text = Nothing
 
-        EpMensaje.SetError(TxtNacionalidad, "")
-        TxtNacionalidad.BackColor = Color.White
+        EpMensaje.SetError(TxtFinalidad, "")
+        TxtFinalidad.BackColor = Color.White
 
     End Sub
 
@@ -77,20 +77,20 @@ Public Class FrmNacionalidad
 
             Try
                 With Cmd
-                    .CommandText = "Sp_MostrarNacionalidad"
+                    .CommandText = "Sp_MostrarFinalidadPrestamo"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
                 End With
 
-                Dim VerCargo As SqlDataReader
-                VerCargo = Cmd.ExecuteReader
+                Dim VerFinalidad As SqlDataReader
+                VerFinalidad = Cmd.ExecuteReader
 
-                LsvLugarTrabajo.Items.Clear()
+                LsvFinalidad.Items.Clear()
 
-                While VerCargo.Read = True
-                    With LsvLugarTrabajo.Items.Add(VerCargo("IdNacionalidad").ToString)
-                        .SubItems.Add(VerCargo("Nacionalidad")).ToString()
+                While VerFinalidad.Read = True
+                    With LsvFinalidad.Items.Add(VerFinalidad("IdFinalidadPrestamo").ToString)
+                        .SubItems.Add(VerFinalidad("Finalidad")).ToString()
                     End With
                 End While
 
@@ -112,7 +112,7 @@ Public Class FrmNacionalidad
             Dim ListarCargo As New SqlCommand("Sp_InvestigarCorrelativo", Cn)
 
             ListarCargo.CommandType = CommandType.StoredProcedure
-            ListarCargo.Parameters.Add("@NombreTabla", SqlDbType.NVarChar, 30).Value = "Nacionalidad"
+            ListarCargo.Parameters.Add("@NombreTabla", SqlDbType.NVarChar, 30).Value = "FinalidadPrestamo"
 
             Dim ListarCargoR As SqlDataReader
             Cn.Open()
@@ -120,9 +120,9 @@ Public Class FrmNacionalidad
 
             If ListarCargoR.Read = True Then
                 If ListarCargoR("IdTabla") Is DBNull.Value Then
-                    TxtIdNacionalidad.Text = 1
+                    TxtIdFinalidad.Text = 1
                 Else
-                    TxtIdNacionalidad.Text = ListarCargoR("IdTabla").ToString + 1
+                    TxtIdFinalidad.Text = ListarCargoR("IdTabla").ToString + 1
                 End If
             End If
 
@@ -134,7 +134,7 @@ Public Class FrmNacionalidad
         End Try
     End Sub
 
-    Private Sub GuardarNacionalidad()
+    Private Sub GuardarFinalidad()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
         End If
@@ -143,11 +143,11 @@ Public Class FrmNacionalidad
             Cn.Open()
             Using Cmd As New SqlCommand
                 With Cmd
-                    .CommandText = "Sp_InsertarNacionalidad"
+                    .CommandText = "Sp_InsertarFinalidadPrestamo"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    .Parameters.Add("@Nacionalidad", SqlDbType.NVarChar, 50).Value = TxtNacionalidad.Text
+                    .Parameters.Add("@Finalidad", SqlDbType.NVarChar, 50).Value = TxtFinalidad.Text
                     .ExecuteNonQuery()
 
                     MessageBox.Show("Registro almacenado satisfactoriamente.", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -156,13 +156,13 @@ Public Class FrmNacionalidad
                 MostrarTodo()
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error al insertar la naciolnalidad", "Cooperativa XYZ" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al insertar la finalidad", "Cooperativa XYZ" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             Cn.Close()
         End Try
     End Sub
 
-    Private Sub ActualizarNacionalidad()
+    Private Sub ActualizarFinalidad()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
         End If
@@ -171,12 +171,12 @@ Public Class FrmNacionalidad
             Cn.Open()
             Using Cmd As New SqlCommand
                 With Cmd
-                    .CommandText = "Sp_ActualizarNacionalidad"
+                    .CommandText = "Sp_ActualizarFinalidadPrestamo"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    .Parameters.Add("@IdNacionalidad", SqlDbType.Int).Value = TxtIdNacionalidad.Text
-                    .Parameters.Add("@Nacionalidad", SqlDbType.NVarChar, 50).Value = TxtNacionalidad.Text
+                    .Parameters.Add("@IdFinalidadPrestamo", SqlDbType.Int).Value = TxtIdFinalidad.Text
+                    .Parameters.Add("@Finalidad", SqlDbType.NVarChar, 50).Value = TxtFinalidad.Text
                     .ExecuteNonQuery()
 
                     MessageBox.Show("Registro almacenado satisfactoriamente.", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -185,13 +185,13 @@ Public Class FrmNacionalidad
                 MostrarTodo()
             End Using
         Catch ex As Exception
-            MessageBox.Show("Error al modificar la nacionalidad", "Cooperativa XZY" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al modificar la finalidad", "Cooperativa XZY" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
         Finally
             Cn.Close()
         End Try
     End Sub
 
-    Private Sub EliminarNacionalidad()
+    Private Sub EliminarFinalidad()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
         End If
@@ -200,14 +200,14 @@ Public Class FrmNacionalidad
             Cn.Open()
             Using Cmd As New SqlCommand
                 With Cmd
-                    .CommandText = "Sp_EliminarNacionalidad"
+                    .CommandText = "Sp_EliminarFinalidadPrestamo"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
                     Dim Id As Integer
 
-                    Id = CInt(LsvLugarTrabajo.FocusedItem.SubItems(0).Text)
-                    .Parameters.Add("@IdNacionalidad", SqlDbType.Int).Value = Id
+                    Id = CInt(LsvFinalidad.FocusedItem.SubItems(0).Text)
+                    .Parameters.Add("@IdFinalidadPrestamo", SqlDbType.Int).Value = Id
                     .ExecuteNonQuery()
 
                     MessageBox.Show("Registro eliminado satisfactoriamente", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -225,39 +225,39 @@ Public Class FrmNacionalidad
     Private Function ValidarTextBox()
         Dim Estado As Boolean
 
-        If TxtNacionalidad.Text = Nothing Then
-            EpMensaje.SetError(TxtNacionalidad, "Tiene que ingresar la nacionalidad")
-            TxtNacionalidad.Focus()
-            TxtNacionalidad.BackColor = Color.LightBlue
+        If TxtFinalidad.Text = Nothing Then
+            EpMensaje.SetError(TxtFinalidad, "Tiene que ingresar la finalidad")
+            TxtFinalidad.Focus()
+            TxtFinalidad.BackColor = Color.LightBlue
             Estado = False
         Else
             Estado = True
-            EpMensaje.SetError(TxtNacionalidad, "")
-            TxtNacionalidad.BackColor = Color.White
+            EpMensaje.SetError(TxtFinalidad, "")
+            TxtFinalidad.BackColor = Color.White
         End If
 
         Return Estado
 
     End Function
 
-    Private Sub TxtNacionalidad_TextChanged(sender As Object, e As EventArgs) Handles TxtNacionalidad.TextChanged
-        If TxtNacionalidad.Text <> Nothing Then
-            EpMensaje.SetError(TxtNacionalidad, "")
-            TxtNacionalidad.BackColor = Color.White
+    Private Sub TxtNacionalidad_TextChanged(sender As Object, e As EventArgs) Handles TxtFinalidad.TextChanged
+        If TxtFinalidad.Text <> Nothing Then
+            EpMensaje.SetError(TxtFinalidad, "")
+            TxtFinalidad.BackColor = Color.White
         End If
     End Sub
 
     Private Sub ToolStripMenuItemEliminar_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItemEliminar.Click
-        EliminarNacionalidad()
+        EliminarFinalidad()
         MostrarTodo()
         HabilitarBotones(True, False, False, False)
     End Sub
 
     Private Sub ToolStripMenuItemEditar_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItemEditar.Click
         HabilitarBotones(False, False, True, True)
-        TxtNacionalidad.ReadOnly = False
-        TxtIdNacionalidad.Text = LsvLugarTrabajo.FocusedItem.SubItems(0).Text
-        TxtNacionalidad.Text = LsvLugarTrabajo.FocusedItem.SubItems(1).Text
+        TxtFinalidad.ReadOnly = False
+        TxtIdFinalidad.Text = LsvFinalidad.FocusedItem.SubItems(0).Text
+        TxtFinalidad.Text = LsvFinalidad.FocusedItem.SubItems(1).Text
     End Sub
 
 End Class

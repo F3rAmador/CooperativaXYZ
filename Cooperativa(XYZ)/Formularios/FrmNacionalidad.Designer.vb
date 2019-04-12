@@ -25,30 +25,30 @@ Partial Class FrmNacionalidad
         Me.components = New System.ComponentModel.Container()
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TxtIdNacionalidad = New System.Windows.Forms.TextBox()
-        Me.PbxLogo = New System.Windows.Forms.PictureBox()
         Me.LsvLugarTrabajo = New System.Windows.Forms.ListView()
         Me.ChIdNacionalidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChNacionalidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CmsOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItemEditar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItemEliminar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BtnCerrar = New System.Windows.Forms.Button()
-        Me.BtnModificar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.TxtNacionalidad = New System.Windows.Forms.TextBox()
         Me.PCentarl = New System.Windows.Forms.Panel()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PbxLogo = New System.Windows.Forms.PictureBox()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnNuevo = New System.Windows.Forms.Button()
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsOpciones.SuspendLayout()
         Me.PCentarl.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'EpMensaje
@@ -65,17 +65,6 @@ Partial Class FrmNacionalidad
         Me.TxtIdNacionalidad.ReadOnly = True
         Me.TxtIdNacionalidad.Size = New System.Drawing.Size(167, 29)
         Me.TxtIdNacionalidad.TabIndex = 10
-        '
-        'PbxLogo
-        '
-        Me.PbxLogo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PbxLogo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.LogoCooperativa
-        Me.PbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbxLogo.Location = New System.Drawing.Point(733, 245)
-        Me.PbxLogo.Name = "PbxLogo"
-        Me.PbxLogo.Size = New System.Drawing.Size(245, 71)
-        Me.PbxLogo.TabIndex = 13
-        Me.PbxLogo.TabStop = False
         '
         'LsvLugarTrabajo
         '
@@ -120,34 +109,6 @@ Partial Class FrmNacionalidad
         Me.ToolStripMenuItemEliminar.Size = New System.Drawing.Size(117, 22)
         Me.ToolStripMenuItemEliminar.Text = "Eliminar"
         '
-        'BtnCerrar
-        '
-        Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnCerrar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
-        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnCerrar.FlatAppearance.BorderSize = 0
-        Me.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCerrar.Location = New System.Drawing.Point(930, 4)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(37, 33)
-        Me.BtnCerrar.TabIndex = 13
-        Me.BtnCerrar.UseVisualStyleBackColor = False
-        '
-        'BtnModificar
-        '
-        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BtnModificar.Enabled = False
-        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnModificar.Image = Global.Cooperativa_XYZ_.My.Resources.Resources.editar
-        Me.BtnModificar.Location = New System.Drawing.Point(569, 150)
-        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(39, 43)
-        Me.BtnModificar.TabIndex = 19
-        Me.BtnModificar.UseVisualStyleBackColor = True
-        '
         'Label4
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -159,19 +120,6 @@ Partial Class FrmNacionalidad
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Código Nacionalidad:"
         '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BtnGuardar.Enabled = False
-        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.Image = Global.Cooperativa_XYZ_.My.Resources.Resources.guardar_archivo_opcion
-        Me.BtnGuardar.Location = New System.Drawing.Point(484, 150)
-        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(39, 43)
-        Me.BtnGuardar.TabIndex = 18
-        Me.BtnGuardar.UseVisualStyleBackColor = True
-        '
         'Label3
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -182,20 +130,6 @@ Partial Class FrmNacionalidad
         Me.Label3.Size = New System.Drawing.Size(125, 24)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Nacionalidad:"
-        '
-        'BtnNuevo
-        '
-        Me.BtnNuevo.AccessibleDescription = ""
-        Me.BtnNuevo.AccessibleName = ""
-        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnNuevo.Image = Global.Cooperativa_XYZ_.My.Resources.Resources.boton_nuevo_documento
-        Me.BtnNuevo.Location = New System.Drawing.Point(394, 150)
-        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(39, 43)
-        Me.BtnNuevo.TabIndex = 17
-        Me.BtnNuevo.UseVisualStyleBackColor = True
         '
         'TxtNacionalidad
         '
@@ -219,20 +153,6 @@ Partial Class FrmNacionalidad
         Me.PCentarl.Name = "PCentarl"
         Me.PCentarl.Size = New System.Drawing.Size(968, 300)
         Me.PCentarl.TabIndex = 18
-        '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BtnCancelar.Enabled = False
-        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelar.Image = Global.Cooperativa_XYZ_.My.Resources.Resources.cancelar
-        Me.BtnCancelar.Location = New System.Drawing.Point(658, 150)
-        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(39, 43)
-        Me.BtnCancelar.TabIndex = 20
-        Me.BtnCancelar.UseVisualStyleBackColor = False
         '
         'GroupBox1
         '
@@ -262,6 +182,86 @@ Partial Class FrmNacionalidad
         Me.Panel1.Size = New System.Drawing.Size(968, 40)
         Me.Panel1.TabIndex = 21
         '
+        'PbxLogo
+        '
+        Me.PbxLogo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PbxLogo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.LogoCooperativa
+        Me.PbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbxLogo.Location = New System.Drawing.Point(733, 245)
+        Me.PbxLogo.Name = "PbxLogo"
+        Me.PbxLogo.Size = New System.Drawing.Size(245, 71)
+        Me.PbxLogo.TabIndex = 13
+        Me.PbxLogo.TabStop = False
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnCerrar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.Location = New System.Drawing.Point(930, 4)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(37, 33)
+        Me.BtnCerrar.TabIndex = 13
+        Me.BtnCerrar.UseVisualStyleBackColor = False
+        '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnCancelar.Enabled = False
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.Image = Global.Cooperativa_XYZ_.My.Resources.Resources.cancelar
+        Me.BtnCancelar.Location = New System.Drawing.Point(658, 150)
+        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(39, 43)
+        Me.BtnCancelar.TabIndex = 20
+        Me.BtnCancelar.UseVisualStyleBackColor = False
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnModificar.Enabled = False
+        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificar.Image = Global.Cooperativa_XYZ_.My.Resources.Resources.editar
+        Me.BtnModificar.Location = New System.Drawing.Point(569, 150)
+        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(39, 43)
+        Me.BtnModificar.TabIndex = 19
+        Me.BtnModificar.UseVisualStyleBackColor = True
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnGuardar.Enabled = False
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.Image = Global.Cooperativa_XYZ_.My.Resources.Resources.guardar_archivo_opcion
+        Me.BtnGuardar.Location = New System.Drawing.Point(484, 150)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(39, 43)
+        Me.BtnGuardar.TabIndex = 18
+        Me.BtnGuardar.UseVisualStyleBackColor = True
+        '
+        'BtnNuevo
+        '
+        Me.BtnNuevo.AccessibleDescription = ""
+        Me.BtnNuevo.AccessibleName = ""
+        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnNuevo.Image = Global.Cooperativa_XYZ_.My.Resources.Resources.boton_nuevo_documento
+        Me.BtnNuevo.Location = New System.Drawing.Point(394, 150)
+        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(39, 43)
+        Me.BtnNuevo.TabIndex = 17
+        Me.BtnNuevo.UseVisualStyleBackColor = True
+        '
         'FrmNacionalidad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -273,12 +273,12 @@ Partial Class FrmNacionalidad
         Me.Name = "FrmNacionalidad"
         Me.Text = "FrmNacionalidad"
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsOpciones.ResumeLayout(False)
         Me.PCentarl.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
