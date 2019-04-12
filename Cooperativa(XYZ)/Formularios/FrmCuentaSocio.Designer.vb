@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmCuentaSocio
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -32,23 +32,16 @@ Partial Class FrmCuentaSocio
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtDescripcionTipoCuenta = New System.Windows.Forms.TextBox()
         Me.TxtCodSocio = New System.Windows.Forms.TextBox()
-        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TxtSaldo = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CboTipoCuenta = New System.Windows.Forms.ComboBox()
         Me.DtpFechaApertura = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
-        Me.BtnModificar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.TxtNumCuenta = New System.Windows.Forms.TextBox()
         Me.TpListadoCuentasSocio = New System.Windows.Forms.TabPage()
-        Me.BtnCerrar2 = New System.Windows.Forms.Button()
         Me.LsvCuentaSocio = New System.Windows.Forms.ListView()
         Me.ChNumCuenta = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChCodSocio = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -57,13 +50,21 @@ Partial Class FrmCuentaSocio
         Me.ChSaldo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChFechaApertura = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.BtnBuscarSocio = New System.Windows.Forms.Button()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnNuevo = New System.Windows.Forms.Button()
+        Me.BtnCerrar2 = New System.Windows.Forms.Button()
         Me.CmsOpciones.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TpCuentaSocio.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TpListadoCuentasSocio.SuspendLayout()
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CmsOpciones
@@ -109,6 +110,7 @@ Partial Class FrmCuentaSocio
         '
         'TpCuentaSocio
         '
+        Me.TpCuentaSocio.Controls.Add(Me.BtnBuscarSocio)
         Me.TpCuentaSocio.Controls.Add(Me.Label5)
         Me.TpCuentaSocio.Controls.Add(Me.TxtDescripcionTipoCuenta)
         Me.TpCuentaSocio.Controls.Add(Me.TxtCodSocio)
@@ -140,7 +142,7 @@ Partial Class FrmCuentaSocio
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(470, 35)
+        Me.Label5.Location = New System.Drawing.Point(527, 35)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(272, 24)
         Me.Label5.TabIndex = 52
@@ -151,7 +153,7 @@ Partial Class FrmCuentaSocio
         Me.TxtDescripcionTipoCuenta.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TxtDescripcionTipoCuenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TxtDescripcionTipoCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDescripcionTipoCuenta.Location = New System.Drawing.Point(474, 72)
+        Me.TxtDescripcionTipoCuenta.Location = New System.Drawing.Point(531, 72)
         Me.TxtDescripcionTipoCuenta.Multiline = True
         Me.TxtDescripcionTipoCuenta.Name = "TxtDescripcionTipoCuenta"
         Me.TxtDescripcionTipoCuenta.Size = New System.Drawing.Size(364, 120)
@@ -166,21 +168,6 @@ Partial Class FrmCuentaSocio
         Me.TxtCodSocio.Name = "TxtCodSocio"
         Me.TxtCodSocio.Size = New System.Drawing.Size(206, 29)
         Me.TxtCodSocio.TabIndex = 51
-        '
-        'BtnCerrar
-        '
-        Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnCerrar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
-        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnCerrar.FlatAppearance.BorderSize = 0
-        Me.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCerrar.Location = New System.Drawing.Point(923, 0)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(37, 33)
-        Me.BtnCerrar.TabIndex = 50
-        Me.BtnCerrar.UseVisualStyleBackColor = False
         '
         'Label6
         '
@@ -243,44 +230,6 @@ Partial Class FrmCuentaSocio
         Me.Label1.TabIndex = 30
         Me.Label1.Text = "Código Socio"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.LogoCooperativa
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(715, 351)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(245, 71)
-        Me.PictureBox1.TabIndex = 29
-        Me.PictureBox1.TabStop = False
-        '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.cancelar
-        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BtnCancelar.Enabled = False
-        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelar.Location = New System.Drawing.Point(572, 373)
-        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(39, 43)
-        Me.BtnCancelar.TabIndex = 28
-        Me.BtnCancelar.UseVisualStyleBackColor = False
-        '
-        'BtnModificar
-        '
-        Me.BtnModificar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.editar
-        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BtnModificar.Enabled = False
-        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnModificar.Location = New System.Drawing.Point(483, 373)
-        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(39, 43)
-        Me.BtnModificar.TabIndex = 27
-        Me.BtnModificar.UseVisualStyleBackColor = True
-        '
         'Label4
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -292,19 +241,6 @@ Partial Class FrmCuentaSocio
         Me.Label4.TabIndex = 21
         Me.Label4.Text = " Número de cuenta"
         '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.guardar_archivo_opcion
-        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BtnGuardar.Enabled = False
-        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.Location = New System.Drawing.Point(398, 373)
-        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(39, 43)
-        Me.BtnGuardar.TabIndex = 26
-        Me.BtnGuardar.UseVisualStyleBackColor = True
-        '
         'Label3
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -315,20 +251,6 @@ Partial Class FrmCuentaSocio
         Me.Label3.Size = New System.Drawing.Size(113, 24)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Tipo Cuenta"
-        '
-        'BtnNuevo
-        '
-        Me.BtnNuevo.AccessibleDescription = ""
-        Me.BtnNuevo.AccessibleName = ""
-        Me.BtnNuevo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.boton_nuevo_documento
-        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnNuevo.Location = New System.Drawing.Point(308, 373)
-        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(39, 43)
-        Me.BtnNuevo.TabIndex = 25
-        Me.BtnNuevo.UseVisualStyleBackColor = True
         '
         'TxtNumCuenta
         '
@@ -351,21 +273,6 @@ Partial Class FrmCuentaSocio
         Me.TpListadoCuentasSocio.TabIndex = 1
         Me.TpListadoCuentasSocio.Text = "Listado de cuentas de socio"
         Me.TpListadoCuentasSocio.UseVisualStyleBackColor = True
-        '
-        'BtnCerrar2
-        '
-        Me.BtnCerrar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCerrar2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnCerrar2.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
-        Me.BtnCerrar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnCerrar2.FlatAppearance.BorderSize = 0
-        Me.BtnCerrar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.BtnCerrar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCerrar2.Location = New System.Drawing.Point(922, 1)
-        Me.BtnCerrar2.Name = "BtnCerrar2"
-        Me.BtnCerrar2.Size = New System.Drawing.Size(37, 33)
-        Me.BtnCerrar2.TabIndex = 51
-        Me.BtnCerrar2.UseVisualStyleBackColor = False
         '
         'LsvCuentaSocio
         '
@@ -417,6 +324,114 @@ Partial Class FrmCuentaSocio
         '
         Me.EpMensaje.ContainerControl = Me
         '
+        'BtnBuscarSocio
+        '
+        Me.BtnBuscarSocio.BackColor = System.Drawing.Color.Black
+        Me.BtnBuscarSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnBuscarSocio.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBuscarSocio.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnBuscarSocio.Location = New System.Drawing.Point(438, 101)
+        Me.BtnBuscarSocio.Name = "BtnBuscarSocio"
+        Me.BtnBuscarSocio.Size = New System.Drawing.Size(42, 29)
+        Me.BtnBuscarSocio.TabIndex = 54
+        Me.BtnBuscarSocio.Text = "..."
+        Me.BtnBuscarSocio.UseVisualStyleBackColor = False
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnCerrar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.Location = New System.Drawing.Point(923, 0)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(37, 33)
+        Me.BtnCerrar.TabIndex = 50
+        Me.BtnCerrar.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.LogoCooperativa
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(715, 351)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(245, 71)
+        Me.PictureBox1.TabIndex = 29
+        Me.PictureBox1.TabStop = False
+        '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.cancelar
+        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnCancelar.Enabled = False
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.Location = New System.Drawing.Point(572, 373)
+        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(39, 43)
+        Me.BtnCancelar.TabIndex = 28
+        Me.BtnCancelar.UseVisualStyleBackColor = False
+        '
+        'BtnModificar
+        '
+        Me.BtnModificar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.editar
+        Me.BtnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnModificar.Enabled = False
+        Me.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnModificar.Location = New System.Drawing.Point(483, 373)
+        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(39, 43)
+        Me.BtnModificar.TabIndex = 27
+        Me.BtnModificar.UseVisualStyleBackColor = True
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.guardar_archivo_opcion
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnGuardar.Enabled = False
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.Location = New System.Drawing.Point(398, 373)
+        Me.BtnGuardar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(39, 43)
+        Me.BtnGuardar.TabIndex = 26
+        Me.BtnGuardar.UseVisualStyleBackColor = True
+        '
+        'BtnNuevo
+        '
+        Me.BtnNuevo.AccessibleDescription = ""
+        Me.BtnNuevo.AccessibleName = ""
+        Me.BtnNuevo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.boton_nuevo_documento
+        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnNuevo.Location = New System.Drawing.Point(308, 373)
+        Me.BtnNuevo.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(39, 43)
+        Me.BtnNuevo.TabIndex = 25
+        Me.BtnNuevo.UseVisualStyleBackColor = True
+        '
+        'BtnCerrar2
+        '
+        Me.BtnCerrar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnCerrar2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnCerrar2.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
+        Me.BtnCerrar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar2.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnCerrar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar2.Location = New System.Drawing.Point(922, 1)
+        Me.BtnCerrar2.Name = "BtnCerrar2"
+        Me.BtnCerrar2.Size = New System.Drawing.Size(37, 33)
+        Me.BtnCerrar2.TabIndex = 51
+        Me.BtnCerrar2.UseVisualStyleBackColor = False
+        '
         'FrmCuentaSocio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -431,9 +446,9 @@ Partial Class FrmCuentaSocio
         Me.TabControl1.ResumeLayout(False)
         Me.TpCuentaSocio.ResumeLayout(False)
         Me.TpCuentaSocio.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TpListadoCuentasSocio.ResumeLayout(False)
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -471,4 +486,6 @@ Partial Class FrmCuentaSocio
     Friend WithEvents Label5 As Label
     Friend WithEvents TxtDescripcionTipoCuenta As TextBox
     Friend WithEvents ChDescripcionTipoCuenta As ColumnHeader
+    Friend WithEvents BtnBuscarSocio As Button
 End Class
+

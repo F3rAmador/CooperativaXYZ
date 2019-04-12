@@ -45,12 +45,12 @@ Public Class FrmCuentaSocio
 
         If ValidarTextBox() = True Then
             GuardarCuentaSocio()
-            Limpiar()
+            'Limpiar()
             HabilitarBotones(True, False, False, False, True, True)
             HabilitarTextBox(False, False, False, False, False, False)
             MostrarTodo()
         Else
-            Limpiar()
+            'Limpiar()
             HabilitarBotones(False, True, False, True, True, True)
             MostrarTodo()
         End If
@@ -182,11 +182,13 @@ Public Class FrmCuentaSocio
 
         If TxtNumCuenta.Text = Nothing And TxtCodSocio.Text = Nothing And CboTipoCuenta.Text = Nothing And TxtDescripcionTipoCuenta.Text = Nothing And TxtSaldo.Text = Nothing Then
             EpMensaje.SetError(TxtNumCuenta, "Tiene que ingresar el número de cuenta")
+            EpMensaje.SetError(TxtCodSocio, "Tiene que agregar el número de socio")
             EpMensaje.SetError(CboTipoCuenta, "Tiene que seleccionar un tipo de cuenta")
             EpMensaje.SetError(TxtDescripcionTipoCuenta, "Tiene que agregar una descripción a tipo de cuenta")
             EpMensaje.SetError(TxtSaldo, "Tiene que ingresar el saldo")
-        ElseIf TxtNumCuenta.Text = Nothing Then
-            EpMensaje.SetError(TxtNumCuenta, "Tiene que ingresar el número de cuenta")
+            Estado = False
+        ElseIf TxtCodSocio.Text = Nothing Then
+            EpMensaje.SetError(TxtCodSocio, "Tiene que ingresar el número de socio")
             TxtNumCuenta.Focus()
             TxtNumCuenta.BackColor = Color.LightBlue
             Estado = False
@@ -384,5 +386,7 @@ Public Class FrmCuentaSocio
 
     End Sub
 
-
+    Private Sub BtnBuscarSocio_Click(sender As Object, e As EventArgs) Handles BtnBuscarSocio.Click
+        BuscarSocioo.ShowDialog()
+    End Sub
 End Class

@@ -201,14 +201,14 @@ Partial Class BuscarSocioo
         '
         Me.EpMensaje.ContainerControl = Me
         '
-        'FrmBuscarSocio
+        'BuscarSocioo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(968, 468)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FrmBuscarSocio"
+        Me.Name = "BuscarSocioo"
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
