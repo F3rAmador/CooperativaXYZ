@@ -263,7 +263,7 @@ Public Class FrmLugarTrabajo
 
 
     Private Sub PCentarl_MouseHover(sender As Object, e As EventArgs) Handles PCentarl.MouseHover
-        FrmPrincipalAdmin.PanelSub1.Visible = False
+        FrmPrincipalAdmin.PUsuario.Visible = False
         FrmPrincipalAdmin.PanelSub2.Visible = False
         FrmPrincipalAdmin.PanelSub3.Visible = False
         FrmPrincipalAdmin.PanelSub4.Visible = False
@@ -276,7 +276,7 @@ Public Class FrmLugarTrabajo
 
 
     Private Sub GroupBox1_MouseHover(sender As Object, e As EventArgs) Handles GroupBox1.MouseHover
-        FrmPrincipalAdmin.PanelSub1.Visible = False
+        FrmPrincipalAdmin.PUsuario.Visible = False
         FrmPrincipalAdmin.PanelSub2.Visible = False
         FrmPrincipalAdmin.PanelSub3.Visible = False
         FrmPrincipalAdmin.PanelSub4.Visible = False

@@ -498,7 +498,7 @@ Public Class FrmSocio
     End Function
 
     Private Sub TpDatosSocio_MouseHover(sender As Object, e As EventArgs) Handles TpDatosSocio.MouseHover
-        FrmPrincipalAdmin.PanelSub1.Visible = False
+        FrmPrincipalAdmin.PUsuario.Visible = False
         FrmPrincipalAdmin.PanelSub2.Visible = False
         FrmPrincipalAdmin.PanelSub3.Visible = False
         FrmPrincipalAdmin.PanelSub4.Visible = False
@@ -511,7 +511,7 @@ Public Class FrmSocio
 
 
     Private Sub TpListadoDeSolicitudDelSocio_MouseHover(sender As Object, e As EventArgs) Handles TpListadoDeSolicitudDelSocio.MouseHover
-        FrmPrincipalAdmin.PanelSub1.Visible = False
+        FrmPrincipalAdmin.PUsuario.Visible = False
         FrmPrincipalAdmin.PanelSub2.Visible = False
         FrmPrincipalAdmin.PanelSub3.Visible = False
         FrmPrincipalAdmin.PanelSub4.Visible = False

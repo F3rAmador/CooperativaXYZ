@@ -292,7 +292,7 @@ Public Class FrmTipoPrestamo
 
 
     Private Sub PCentarl_MouseHover(sender As Object, e As EventArgs) Handles PCentral.MouseHover
-        FrmPrincipalAdmin.PanelSub1.Visible = False
+        FrmPrincipalAdmin.PUsuario.Visible = False
         FrmPrincipalAdmin.PanelSub2.Visible = False
         FrmPrincipalAdmin.PanelSub3.Visible = False
         FrmPrincipalAdmin.PanelSub4.Visible = False
@@ -304,7 +304,7 @@ Public Class FrmTipoPrestamo
     End Sub
 
     Private Sub GroupBox1_MouseHover(sender As Object, e As EventArgs) Handles GroupBox1.MouseHover
-        FrmPrincipalAdmin.PanelSub1.Visible = False
+        FrmPrincipalAdmin.PUsuario.Visible = False
         FrmPrincipalAdmin.PanelSub2.Visible = False
         FrmPrincipalAdmin.PanelSub3.Visible = False
         FrmPrincipalAdmin.PanelSub4.Visible = False

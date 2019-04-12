@@ -38,7 +38,7 @@
     End Sub
 
     Private Sub PbxTipoPrestamo_Click_1(sender As Object, e As EventArgs) Handles PbxTipoPrestamo.Click
-        PanelSub1.Visible = False
+        PUsuario.Visible = False
         PanelSub2.Visible = False
         PanelSub3.Visible = False
         PanelSub4.Visible = False
@@ -68,7 +68,7 @@
     End Sub
 
     Private Sub PCentral_MouseHover(sender As Object, e As EventArgs) Handles PCentral.MouseHover
-        PanelSub1.Visible = False
+        PUsuario.Visible = False
         PanelSub2.Visible = False
         PanelSub3.Visible = False
         PanelSub4.Visible = False
@@ -80,7 +80,7 @@
     End Sub
 
     Private Sub PbxNacionalidad_Click(sender As Object, e As EventArgs) Handles PbxNacionalidad.Click
-        PanelSub1.Visible = False
+        PUsuario.Visible = False
         PanelSub2.Visible = False
         PanelSub3.Visible = False
         PanelSub4.Visible = False
@@ -95,7 +95,7 @@
     End Sub
 
     Private Sub PbxLugarTrabajo_Click(sender As Object, e As EventArgs) Handles PbxLugarTrabajo.Click
-        PanelSub1.Visible = False
+        PUsuario.Visible = False
         PanelSub2.Visible = False
         PanelSub3.Visible = False
         PanelSub4.Visible = False
@@ -110,7 +110,7 @@
     End Sub
 
     Private Sub Pb_Click(sender As Object, e As EventArgs) Handles PbxSocio.Click
-        PanelSub1.Visible = False
+        PUsuario.Visible = False
         PanelSub2.Visible = False
         PanelSub3.Visible = False
         PanelSub4.Visible = False
@@ -125,7 +125,7 @@
     End Sub
 
     Private Sub PbxOficial_Click(sender As Object, e As EventArgs) Handles PbxOficial.Click
-        PanelSub1.Visible = False
+        PUsuario.Visible = False
         PanelSub2.Visible = False
         PanelSub3.Visible = False
         PanelSub4.Visible = False
@@ -140,7 +140,7 @@
     End Sub
 
     Private Sub PbxTipoCuenta_Click(sender As Object, e As EventArgs) Handles PbxTipoCuenta.Click
-        PanelSub1.Visible = False
+        PUsuario.Visible = False
         PanelSub2.Visible = False
         PanelSub3.Visible = False
         PanelSub4.Visible = False
@@ -155,7 +155,7 @@
     End Sub
 
     Private Sub PbxFinalidadPrestamo_Click(sender As Object, e As EventArgs) Handles PbxFinalidadPrestamo.Click
-        PanelSub1.Visible = False
+        PUsuario.Visible = False
         PanelSub2.Visible = False
         PanelSub3.Visible = False
         PanelSub4.Visible = False
@@ -169,5 +169,18 @@
         InsertarFormularioEnPanel(New FrmFinalidadPrestamo)
     End Sub
 
+    Private Sub PbxUsuario_Click(sender As Object, e As EventArgs) Handles PbxUsuario.Click
+        PUsuario.Visible = True
+    End Sub
 
+
+
+    Private Sub PUsuario_MouseLeave(sender As Object, e As EventArgs) Handles PUsuario.MouseLeave
+        PUsuario.Visible = False
+    End Sub
+
+    Private Sub PbxSolicitudPrestamo_Click(sender As Object, e As EventArgs) Handles PbxSolicitudPrestamo.Click
+        LblTitulo.Text = "SOLICITUD DE PRÉSTAMO"
+        InsertarFormularioEnPanel(New FrmSolicitudPrestamo)
+    End Sub
 End Class
