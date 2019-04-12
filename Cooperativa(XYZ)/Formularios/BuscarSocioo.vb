@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
+Public Class BuscarSocioo
 
-Public Class FrmBuscarSocio
+
 
     ' Seleccionamos los botones a habilitar
     Private Sub FrmSocio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -77,4 +78,5 @@ Public Class FrmBuscarSocio
     Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
 
     End Sub
+
 End Class

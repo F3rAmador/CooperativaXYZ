@@ -279,11 +279,11 @@ Public Class FrmSolicitudPrestamo
     End Sub
 
     Private Sub BtnBuscarSocio_Click(sender As Object, e As EventArgs) Handles BtnBuscarSocio.Click
-        FrmBuscarSocio.ShowDialog()
+        BuscarSocioo.ShowDialog()
     End Sub
 
     Private Sub BtnBuscarOficial_Click(sender As Object, e As EventArgs) Handles BtnBuscarOficial.Click
-        FrmBuscarOficial.ShowDialog()
+        BuscarOficiall.ShowDialog()
     End Sub
 
     Private Sub HabilitarBotones(ByVal Nuevo As Boolean, ByVal Guardar As Boolean, ByVal Modificar As Boolean, ByVal Cancelar As Boolean, ByVal Salir As Boolean)
