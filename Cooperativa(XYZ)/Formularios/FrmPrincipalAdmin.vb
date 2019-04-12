@@ -197,8 +197,8 @@
             ' PbxAlimento.Visible = False
         Loop
         EstadoIngresar = True
-        ' LblTitulo.Text = "CUENTA SOCIO"
-        ' InsertarFormularioEnPanel(New FrmCuentaSocio)
+        LblTitulo.Text = "CUENTA SOCIO"
+        InsertarFormularioEnPanel(New FrmCuentaSocio)
     End Sub
 
     Private Sub PbxRegistroPrestamo_Click(sender As Object, e As EventArgs) Handles PbxRegistroPrestamo.Click
