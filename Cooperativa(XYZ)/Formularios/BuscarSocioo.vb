@@ -70,20 +70,8 @@ Public Class BuscarSocioo
         Close()
     End Sub
 
-    Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Close()
     End Sub
-
-    Private Sub RdbBuscarCodigo_CheckedChanged(sender As Object, e As EventArgs) Handles RdbBuscarCodigo.CheckedChanged
-
-    End Sub
-
-    Private Sub RdbBuscarNombre_CheckedChanged(sender As Object, e As EventArgs) Handles RdbBuscarNombre.CheckedChanged
-
-    End Sub
-
-    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
-
-    End Sub
-
 End Class
