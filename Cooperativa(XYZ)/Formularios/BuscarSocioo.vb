@@ -40,9 +40,9 @@ Public Class BuscarSocioo
                         .SubItems.Add(VerSocio("Apellidos")).ToString()
                         .SubItems.Add(VerSocio("Rtn")).ToString()
                         .SubItems.Add(VerSocio("Direccion")).ToString()
-                        .SubItems.Add(VerSocio("IdNacionalidad")).ToString()
-                        .SubItems.Add(VerSocio("IdEstadoCivil")).ToString()
-                        .SubItems.Add(VerSocio("IdLugarTrabajo")).ToString()
+                        .SubItems.Add(VerSocio("Nacionalidad")).ToString()
+                        .SubItems.Add(VerSocio("EstadoCivil")).ToString()
+                        .SubItems.Add(VerSocio("LugarTrabajo")).ToString()
                         .SubItems.Add(VerSocio("TelCasa")).ToString()
                         .SubItems.Add(VerSocio("TelTrabajo")).ToString()
 
@@ -60,6 +60,13 @@ Public Class BuscarSocioo
 
     Private Sub BtnSeleccionar_Click(sender As Object, e As EventArgs) Handles BtnSeleccionar.Click
         FrmSolicitudPrestamo.TxtSocio.Text = LsvSocio.FocusedItem.SubItems(0).Text
+        FrmRegistroDePrestamo.TxtIdentidadSociedad.Text = LsvSocio.FocusedItem.SubItems(0).Text
+        FrmRegistroDePrestamo.TxtNombreSocio.Text = LsvSocio.FocusedItem.SubItems(1).Text
+        FrmRegistroDePrestamo.TxtRtn.Text = LsvSocio.FocusedItem.SubItems(3).Text
+        FrmRegistroDePrestamo.TxtNacionalidad.Text = LsvSocio.FocusedItem.SubItems(5).Text
+        FrmRegistroDePrestamo.TxtEstadoCivil.Text = LsvSocio.FocusedItem.SubItems(6).Text
+
+
         Close()
     End Sub
 

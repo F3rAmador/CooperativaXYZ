@@ -7,5 +7,7 @@
         FrmBuscarTipoPrestamo.ShowDialog()
     End Sub
 
-
+    Private Sub BtnBuscarSocio_Click(sender As Object, e As EventArgs) Handles BtnBuscarSocio.Click
+        BuscarSocioo.ShowDialog()
+    End Sub
 End Class

@@ -214,6 +214,7 @@ Public Class FrmLogin
                         TxtContraseña.ForeColor = Color.Gray
                         TxtContraseña.UseSystemPasswordChar = False
                         FrmPrincipalAdmin.ShowDialog()
+                        Close()
                     Else
                         ' FrmPrincipalUser.LblUsuario.Text = TxtUsuario.Text
                         TxtUsuario.Text = "USUARIO"
@@ -240,11 +241,13 @@ Public Class FrmLogin
     Private Sub TxtUsuario_TextChanged(sender As Object, e As EventArgs) Handles TxtUsuario.TextChanged
         BuscarNombreUsuario()
         LblMensaje.Text = ""
+        TxtUsuario.ForeColor = Color.White
     End Sub
 
     Private Sub TxtContraseña_TextChanged(sender As Object, e As EventArgs) Handles TxtContraseña.TextChanged
         BuscarContraseñaUsuario()
         LblMensaje.Text = ""
+        TxtContraseña.ForeColor = Color.White
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint

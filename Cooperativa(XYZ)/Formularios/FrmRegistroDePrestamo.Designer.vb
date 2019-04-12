@@ -37,7 +37,6 @@ Partial Class FrmRegistroDePrestamo
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.TxtDireccion = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.CboEstadoCivil = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.TxtNacionalidad = New System.Windows.Forms.TextBox()
@@ -93,6 +92,8 @@ Partial Class FrmRegistroDePrestamo
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
+        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.TxtEstadoCivil = New System.Windows.Forms.TextBox()
         Me.GbxTipoPrestamo.SuspendLayout()
         Me.GbxSocio.SuspendLayout()
         Me.GbxDatosPrestamo.SuspendLayout()
@@ -209,11 +210,12 @@ Partial Class FrmRegistroDePrestamo
         '
         'GbxSocio
         '
+        Me.GbxSocio.Controls.Add(Me.Panel14)
+        Me.GbxSocio.Controls.Add(Me.TxtEstadoCivil)
         Me.GbxSocio.Controls.Add(Me.BtnBuscarSocio)
         Me.GbxSocio.Controls.Add(Me.Panel6)
         Me.GbxSocio.Controls.Add(Me.TxtDireccion)
         Me.GbxSocio.Controls.Add(Me.Label11)
-        Me.GbxSocio.Controls.Add(Me.CboEstadoCivil)
         Me.GbxSocio.Controls.Add(Me.Label10)
         Me.GbxSocio.Controls.Add(Me.Panel5)
         Me.GbxSocio.Controls.Add(Me.TxtNacionalidad)
@@ -273,14 +275,6 @@ Partial Class FrmRegistroDePrestamo
         Me.Label11.Size = New System.Drawing.Size(68, 16)
         Me.Label11.TabIndex = 20
         Me.Label11.Text = "Dirección:"
-        '
-        'CboEstadoCivil
-        '
-        Me.CboEstadoCivil.FormattingEnabled = True
-        Me.CboEstadoCivil.Location = New System.Drawing.Point(533, 52)
-        Me.CboEstadoCivil.Name = "CboEstadoCivil"
-        Me.CboEstadoCivil.Size = New System.Drawing.Size(121, 21)
-        Me.CboEstadoCivil.TabIndex = 19
         '
         'Label10
         '
@@ -809,6 +803,25 @@ Partial Class FrmRegistroDePrestamo
         Me.BtnNuevo.TabIndex = 23
         Me.BtnNuevo.UseVisualStyleBackColor = True
         '
+        'Panel14
+        '
+        Me.Panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel14.Location = New System.Drawing.Point(540, 65)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(139, 1)
+        Me.Panel14.TabIndex = 25
+        '
+        'TxtEstadoCivil
+        '
+        Me.TxtEstadoCivil.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TxtEstadoCivil.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtEstadoCivil.Location = New System.Drawing.Point(539, 50)
+        Me.TxtEstadoCivil.Name = "TxtEstadoCivil"
+        Me.TxtEstadoCivil.ReadOnly = True
+        Me.TxtEstadoCivil.Size = New System.Drawing.Size(139, 15)
+        Me.TxtEstadoCivil.TabIndex = 24
+        '
         'FrmRegistroDePrestamo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -865,7 +878,6 @@ Partial Class FrmRegistroDePrestamo
     Friend WithEvents Panel6 As Panel
     Friend WithEvents TxtDireccion As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents CboEstadoCivil As ComboBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents TxtNacionalidad As TextBox
@@ -922,4 +934,6 @@ Partial Class FrmRegistroDePrestamo
     Friend WithEvents BtnModificar As Button
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnNuevo As Button
+    Friend WithEvents Panel14 As Panel
+    Friend WithEvents TxtEstadoCivil As TextBox
 End Class

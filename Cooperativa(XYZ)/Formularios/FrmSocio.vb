@@ -202,9 +202,9 @@ Public Class FrmSocio
                         .SubItems.Add(VerSocio("Apellidos")).ToString()
                         .SubItems.Add(VerSocio("Rtn")).ToString()
                         .SubItems.Add(VerSocio("Direccion")).ToString()
-                        .SubItems.Add(VerSocio("IdNacionalidad")).ToString()
-                        .SubItems.Add(VerSocio("IdEstadoCivil")).ToString()
-                        .SubItems.Add(VerSocio("IdLugarTrabajo")).ToString()
+                        .SubItems.Add(VerSocio("Nacionalidad")).ToString()
+                        .SubItems.Add(VerSocio("EstadoCivil")).ToString()
+                        .SubItems.Add(VerSocio("LugarTrabajo")).ToString()
                         .SubItems.Add(VerSocio("TelCasa")).ToString()
                         .SubItems.Add(VerSocio("TelTrabajo")).ToString()
 

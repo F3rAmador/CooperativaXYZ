@@ -7,6 +7,7 @@ Public Class FrmBuscarTipoPrestamo
 
     Private Sub FrmTipoPrestamo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LsvTipoPrestamo.Visible = True
+        MostrarTodo()
 
     End Sub
 
