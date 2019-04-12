@@ -17,11 +17,14 @@
         FormularioHijo.show()
     End Sub
     Private Sub PMenu_MouseHover(sender As Object, e As EventArgs) Handles PMenu.MouseHover
-
+        PbxIngresar.Visible = False
+        PbxUsuario.Visible = False
         Do While PMenu.Width < 81
             PMenu.Width += 5
             System.Threading.Thread.Sleep(10)
         Loop
+        PbxIngresar.Visible = True
+        PbxUsuario.Visible = True
 
     End Sub
 
@@ -45,7 +48,7 @@
             ' PbxAlimento.Visible = False
         Loop
         EstadoIngresar = True
-        LblTitulo.Text = "Tipo Préstamo"
+        LblTitulo.Text = "TIPO PRÉSTAMO"
         InsertarFormularioEnPanel(New FrmTipoPrestamo)
     End Sub
 
@@ -65,6 +68,10 @@
     End Sub
 
     Private Sub PCentral_MouseHover(sender As Object, e As EventArgs) Handles PCentral.MouseHover
+        PanelSub1.Visible = False
+        PanelSub2.Visible = False
+        PanelSub3.Visible = False
+        PanelSub4.Visible = False
         Do While PMenu.Width > 9
             PMenu.Width -= 5
             System.Threading.Thread.Sleep(10)
@@ -161,4 +168,6 @@
         LblTitulo.Text = "FINALIDAD DE PRESTAMO"
         InsertarFormularioEnPanel(New FrmFinalidadPrestamo)
     End Sub
+
+
 End Class
