@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmNacionalidad
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -35,9 +35,8 @@ Partial Class FrmNacionalidad
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TxtNacionalidad = New System.Windows.Forms.TextBox()
         Me.PCentarl = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
@@ -46,9 +45,8 @@ Partial Class FrmNacionalidad
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsOpciones.SuspendLayout()
         Me.PCentarl.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'EpMensaje
@@ -154,10 +152,21 @@ Partial Class FrmNacionalidad
         Me.PCentarl.Size = New System.Drawing.Size(968, 300)
         Me.PCentarl.TabIndex = 18
         '
+        'PbxLogo
+        '
+        Me.PbxLogo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PbxLogo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.LogoCooperativa
+        Me.PbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbxLogo.Location = New System.Drawing.Point(733, 245)
+        Me.PbxLogo.Name = "PbxLogo"
+        Me.PbxLogo.Size = New System.Drawing.Size(245, 71)
+        Me.PbxLogo.TabIndex = 13
+        Me.PbxLogo.TabStop = False
+        '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GroupBox1.Controls.Add(Me.Panel1)
+        Me.GroupBox1.Controls.Add(Me.BtnCerrar)
         Me.GroupBox1.Controls.Add(Me.BtnCancelar)
         Me.GroupBox1.Controls.Add(Me.BtnModificar)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -173,26 +182,6 @@ Partial Class FrmNacionalidad
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Panel1.Controls.Add(Me.BtnCerrar)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(968, 40)
-        Me.Panel1.TabIndex = 21
-        '
-        'PbxLogo
-        '
-        Me.PbxLogo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PbxLogo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.LogoCooperativa
-        Me.PbxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbxLogo.Location = New System.Drawing.Point(733, 245)
-        Me.PbxLogo.Name = "PbxLogo"
-        Me.PbxLogo.Size = New System.Drawing.Size(245, 71)
-        Me.PbxLogo.TabIndex = 13
-        Me.PbxLogo.TabStop = False
-        '
         'BtnCerrar
         '
         Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -202,7 +191,7 @@ Partial Class FrmNacionalidad
         Me.BtnCerrar.FlatAppearance.BorderSize = 0
         Me.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCerrar.Location = New System.Drawing.Point(930, 4)
+        Me.BtnCerrar.Location = New System.Drawing.Point(931, 12)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Size = New System.Drawing.Size(37, 33)
         Me.BtnCerrar.TabIndex = 13
@@ -275,10 +264,9 @@ Partial Class FrmNacionalidad
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsOpciones.ResumeLayout(False)
         Me.PCentarl.ResumeLayout(False)
+        CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -302,5 +290,4 @@ Partial Class FrmNacionalidad
     Friend WithEvents BtnNuevo As Button
     Friend WithEvents TxtIdNacionalidad As TextBox
     Friend WithEvents TxtNacionalidad As TextBox
-    Friend WithEvents Panel1 As Panel
 End Class

@@ -66,13 +66,13 @@ Partial Class FrmSocio
         Me.ChNombres = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChApellidos = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChRtn = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ChDireccion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChNacionalidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChEstadoCivil = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChLugarTrabajo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChTelefonoCasa = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChTelefonoTrabajo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.CmsOpciones.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TcDatos.SuspendLayout()
@@ -552,10 +552,6 @@ Partial Class FrmSocio
         Me.ChRtn.Text = "Rtn"
         Me.ChRtn.Width = 104
         '
-        'EpMensaje
-        '
-        Me.EpMensaje.ContainerControl = Me
-        '
         'ChDireccion
         '
         Me.ChDireccion.Text = "Dirección"
@@ -585,6 +581,10 @@ Partial Class FrmSocio
         '
         Me.ChTelefonoTrabajo.Text = "Teléfono Trabajo"
         Me.ChTelefonoTrabajo.Width = 108
+        '
+        'EpMensaje
+        '
+        Me.EpMensaje.ContainerControl = Me
         '
         'FrmSocio
         '

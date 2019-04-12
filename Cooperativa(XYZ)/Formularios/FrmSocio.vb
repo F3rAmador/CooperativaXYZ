@@ -496,4 +496,31 @@ Public Class FrmSocio
         End If
         Return Estado
     End Function
+
+    Private Sub TpDatosSocio_MouseHover(sender As Object, e As EventArgs) Handles TpDatosSocio.MouseHover
+        FrmPrincipalAdmin.PanelSub1.Visible = False
+        FrmPrincipalAdmin.PanelSub2.Visible = False
+        FrmPrincipalAdmin.PanelSub3.Visible = False
+        FrmPrincipalAdmin.PanelSub4.Visible = False
+        Do While FrmPrincipalAdmin.PMenu.Width > 9
+            FrmPrincipalAdmin.PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+    End Sub
+
+
+    Private Sub TpListadoDeSolicitudDelSocio_MouseHover(sender As Object, e As EventArgs) Handles TpListadoDeSolicitudDelSocio.MouseHover
+        FrmPrincipalAdmin.PanelSub1.Visible = False
+        FrmPrincipalAdmin.PanelSub2.Visible = False
+        FrmPrincipalAdmin.PanelSub3.Visible = False
+        FrmPrincipalAdmin.PanelSub4.Visible = False
+        Do While FrmPrincipalAdmin.PMenu.Width > 9
+            FrmPrincipalAdmin.PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+    End Sub
+
+
 End Class

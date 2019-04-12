@@ -74,16 +74,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Connection.vb" />
-    <Compile Include="Formularios\FrmBuscarOficial.Designer.vb">
-      <DependentUpon>FrmBuscarOficial.vb</DependentUpon>
+    <Compile Include="Formularios\FrmBuscarTipoPrestamo.Designer.vb">
+      <DependentUpon>FrmBuscarTipoPrestamo.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmBuscarOficial.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FrmBuscarSocio.Designer.vb">
-      <DependentUpon>FrmBuscarSocio.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FrmBuscarSocio.vb">
+    <Compile Include="Formularios\FrmBuscarTipoPrestamo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmFinalidadPrestamo.Designer.vb">
@@ -108,6 +102,18 @@
       <DependentUpon>FrmOficial.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmOficial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPrincipalAdmin.Designer.vb">
+      <DependentUpon>FrmPrincipalAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPrincipalAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistroDePrestamo.Designer.vb">
+      <DependentUpon>FrmRegistroDePrestamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistroDePrestamo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmSocio.Designer.vb">
@@ -152,11 +158,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formularios\FrmBuscarOficial.resx">
-      <DependentUpon>FrmBuscarOficial.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmBuscarSocio.resx">
-      <DependentUpon>FrmBuscarSocio.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmBuscarTipoPrestamo.resx">
+      <DependentUpon>FrmBuscarTipoPrestamo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmFinalidadPrestamo.resx">
       <DependentUpon>FrmFinalidadPrestamo.vb</DependentUpon>
@@ -166,6 +169,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmNacionalidad.resx">
       <DependentUpon>FrmNacionalidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmOficial.resx">
+      <DependentUpon>FrmOficial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPrincipalAdmin.resx">
+      <DependentUpon>FrmPrincipalAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmRegistroDePrestamo.resx">
+      <DependentUpon>FrmRegistroDePrestamo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmSocio.resx">
       <DependentUpon>FrmSocio.vb</DependentUpon>
@@ -213,6 +225,44 @@
   <ItemGroup>
     <None Include="Resources\guardar-archivo-opcion.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\IconCargo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconNacionalidad %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconProfesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconLugarTrabajo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Socio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconOficial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconTipoCuenta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconFinalidadPrestamo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconMinimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconUsuario %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AgregarDatosBD2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconCerrar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconBuscar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
