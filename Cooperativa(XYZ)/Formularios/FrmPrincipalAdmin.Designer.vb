@@ -24,47 +24,49 @@ Partial Class FrmPrincipalAdmin
     Private Sub InitializeComponent()
         Me.LblFinalidadPrestamo = New System.Windows.Forms.Label()
         Me.PanelSub4 = New System.Windows.Forms.Panel()
-        Me.PbxFinalidadPrestamo = New System.Windows.Forms.PictureBox()
         Me.LblOficial = New System.Windows.Forms.Label()
         Me.LblSocio = New System.Windows.Forms.Label()
         Me.LblLugarTrabajo = New System.Windows.Forms.Label()
         Me.PanelSub3 = New System.Windows.Forms.Panel()
-        Me.PbxOficial = New System.Windows.Forms.PictureBox()
-        Me.PbxSocio = New System.Windows.Forms.PictureBox()
-        Me.PbxLugarTrabajo = New System.Windows.Forms.PictureBox()
         Me.LblNacionalidad = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.BtnMinimizar = New System.Windows.Forms.Button()
         Me.LblTitulo = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.BtnSalir = New System.Windows.Forms.Button()
         Me.PanelSub2 = New System.Windows.Forms.Panel()
         Me.LblTipoPrestamo = New System.Windows.Forms.Label()
-        Me.PbxNacionalidad = New System.Windows.Forms.PictureBox()
-        Me.PbxTipoPrestamo = New System.Windows.Forms.PictureBox()
         Me.PUsuario = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.LblUsuario = New System.Windows.Forms.Label()
         Me.LblUsuario1 = New System.Windows.Forms.Label()
         Me.PMenu = New System.Windows.Forms.Panel()
+        Me.PCentral = New System.Windows.Forms.Panel()
+        Me.PbxFinalidadPrestamo = New System.Windows.Forms.PictureBox()
+        Me.PbxSocio = New System.Windows.Forms.PictureBox()
+        Me.PbxOficial = New System.Windows.Forms.PictureBox()
+        Me.PbxLugarTrabajo = New System.Windows.Forms.PictureBox()
+        Me.PbxNacionalidad = New System.Windows.Forms.PictureBox()
+        Me.PbxTipoPrestamo = New System.Windows.Forms.PictureBox()
+        Me.PbxRegistroPrestamo = New System.Windows.Forms.PictureBox()
         Me.PbxCuentaSocio = New System.Windows.Forms.PictureBox()
         Me.PbxSolicitudPrestamo = New System.Windows.Forms.PictureBox()
         Me.PbxIngresar = New System.Windows.Forms.PictureBox()
         Me.PbxUsuario = New System.Windows.Forms.PictureBox()
-        Me.PCentral = New System.Windows.Forms.Panel()
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
+        Me.BtnMinimizar = New System.Windows.Forms.Button()
+        Me.BtnSalir = New System.Windows.Forms.Button()
         Me.PanelSub4.SuspendLayout()
-        CType(Me.PbxFinalidadPrestamo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelSub3.SuspendLayout()
-        CType(Me.PbxOficial, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbxSocio, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbxLugarTrabajo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.PanelSub2.SuspendLayout()
-        CType(Me.PbxNacionalidad, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbxTipoPrestamo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PUsuario.SuspendLayout()
         Me.PMenu.SuspendLayout()
+        CType(Me.PbxFinalidadPrestamo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxSocio, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxOficial, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxLugarTrabajo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxNacionalidad, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxTipoPrestamo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxRegistroPrestamo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxCuentaSocio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxSolicitudPrestamo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxIngresar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,16 +97,6 @@ Partial Class FrmPrincipalAdmin
         Me.PanelSub4.Size = New System.Drawing.Size(248, 64)
         Me.PanelSub4.TabIndex = 19
         Me.PanelSub4.Visible = False
-        '
-        'PbxFinalidadPrestamo
-        '
-        Me.PbxFinalidadPrestamo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconFinalidadPrestamo
-        Me.PbxFinalidadPrestamo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbxFinalidadPrestamo.Location = New System.Drawing.Point(23, 15)
-        Me.PbxFinalidadPrestamo.Name = "PbxFinalidadPrestamo"
-        Me.PbxFinalidadPrestamo.Size = New System.Drawing.Size(52, 49)
-        Me.PbxFinalidadPrestamo.TabIndex = 9
-        Me.PbxFinalidadPrestamo.TabStop = False
         '
         'LblOficial
         '
@@ -152,36 +144,6 @@ Partial Class FrmPrincipalAdmin
         Me.PanelSub3.TabIndex = 18
         Me.PanelSub3.Visible = False
         '
-        'PbxOficial
-        '
-        Me.PbxOficial.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconOficial
-        Me.PbxOficial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbxOficial.Location = New System.Drawing.Point(164, 18)
-        Me.PbxOficial.Name = "PbxOficial"
-        Me.PbxOficial.Size = New System.Drawing.Size(52, 50)
-        Me.PbxOficial.TabIndex = 13
-        Me.PbxOficial.TabStop = False
-        '
-        'PbxSocio
-        '
-        Me.PbxSocio.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.Socio
-        Me.PbxSocio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbxSocio.Location = New System.Drawing.Point(164, 15)
-        Me.PbxSocio.Name = "PbxSocio"
-        Me.PbxSocio.Size = New System.Drawing.Size(52, 49)
-        Me.PbxSocio.TabIndex = 9
-        Me.PbxSocio.TabStop = False
-        '
-        'PbxLugarTrabajo
-        '
-        Me.PbxLugarTrabajo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconLugarTrabajo
-        Me.PbxLugarTrabajo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbxLugarTrabajo.Location = New System.Drawing.Point(23, 14)
-        Me.PbxLugarTrabajo.Name = "PbxLugarTrabajo"
-        Me.PbxLugarTrabajo.Size = New System.Drawing.Size(52, 50)
-        Me.PbxLugarTrabajo.TabIndex = 8
-        Me.PbxLugarTrabajo.TabStop = False
-        '
         'LblNacionalidad
         '
         Me.LblNacionalidad.AutoSize = True
@@ -206,20 +168,6 @@ Partial Class FrmPrincipalAdmin
         Me.Panel1.Size = New System.Drawing.Size(984, 38)
         Me.Panel1.TabIndex = 12
         '
-        'BtnMinimizar
-        '
-        Me.BtnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnMinimizar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconMinimizar
-        Me.BtnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnMinimizar.FlatAppearance.BorderSize = 0
-        Me.BtnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
-        Me.BtnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnMinimizar.Location = New System.Drawing.Point(904, 3)
-        Me.BtnMinimizar.Name = "BtnMinimizar"
-        Me.BtnMinimizar.Size = New System.Drawing.Size(40, 35)
-        Me.BtnMinimizar.TabIndex = 5
-        Me.BtnMinimizar.UseVisualStyleBackColor = True
-        '
         'LblTitulo
         '
         Me.LblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -241,20 +189,6 @@ Partial Class FrmPrincipalAdmin
         Me.Label1.Size = New System.Drawing.Size(187, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Gestión de Prestamos"
-        '
-        'BtnSalir
-        '
-        Me.BtnSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnSalir.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
-        Me.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnSalir.FlatAppearance.BorderSize = 0
-        Me.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnSalir.Location = New System.Drawing.Point(944, 3)
-        Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(40, 35)
-        Me.BtnSalir.TabIndex = 1
-        Me.BtnSalir.UseVisualStyleBackColor = True
         '
         'PanelSub2
         '
@@ -279,26 +213,6 @@ Partial Class FrmPrincipalAdmin
         Me.LblTipoPrestamo.Size = New System.Drawing.Size(116, 16)
         Me.LblTipoPrestamo.TabIndex = 10
         Me.LblTipoPrestamo.Text = "Tipo de Prestamo"
-        '
-        'PbxNacionalidad
-        '
-        Me.PbxNacionalidad.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconNacionalidad__2_
-        Me.PbxNacionalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbxNacionalidad.Location = New System.Drawing.Point(164, 15)
-        Me.PbxNacionalidad.Name = "PbxNacionalidad"
-        Me.PbxNacionalidad.Size = New System.Drawing.Size(52, 49)
-        Me.PbxNacionalidad.TabIndex = 9
-        Me.PbxNacionalidad.TabStop = False
-        '
-        'PbxTipoPrestamo
-        '
-        Me.PbxTipoPrestamo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCargo
-        Me.PbxTipoPrestamo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PbxTipoPrestamo.Location = New System.Drawing.Point(23, 14)
-        Me.PbxTipoPrestamo.Name = "PbxTipoPrestamo"
-        Me.PbxTipoPrestamo.Size = New System.Drawing.Size(52, 50)
-        Me.PbxTipoPrestamo.TabIndex = 8
-        Me.PbxTipoPrestamo.TabStop = False
         '
         'PUsuario
         '
@@ -351,6 +265,7 @@ Partial Class FrmPrincipalAdmin
         'PMenu
         '
         Me.PMenu.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.PMenu.Controls.Add(Me.PbxRegistroPrestamo)
         Me.PMenu.Controls.Add(Me.PbxCuentaSocio)
         Me.PMenu.Controls.Add(Me.PbxSolicitudPrestamo)
         Me.PMenu.Controls.Add(Me.PbxIngresar)
@@ -359,8 +274,88 @@ Partial Class FrmPrincipalAdmin
         Me.PMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.PMenu.Location = New System.Drawing.Point(0, 38)
         Me.PMenu.Name = "PMenu"
-        Me.PMenu.Size = New System.Drawing.Size(13, 551)
+        Me.PMenu.Size = New System.Drawing.Size(84, 551)
         Me.PMenu.TabIndex = 20
+        '
+        'PCentral
+        '
+        Me.PCentral.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PCentral.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PCentral.Location = New System.Drawing.Point(84, 38)
+        Me.PCentral.Name = "PCentral"
+        Me.PCentral.Size = New System.Drawing.Size(900, 551)
+        Me.PCentral.TabIndex = 21
+        '
+        'PbxFinalidadPrestamo
+        '
+        Me.PbxFinalidadPrestamo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconFinalidadPrestamo
+        Me.PbxFinalidadPrestamo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbxFinalidadPrestamo.Location = New System.Drawing.Point(23, 15)
+        Me.PbxFinalidadPrestamo.Name = "PbxFinalidadPrestamo"
+        Me.PbxFinalidadPrestamo.Size = New System.Drawing.Size(52, 49)
+        Me.PbxFinalidadPrestamo.TabIndex = 9
+        Me.PbxFinalidadPrestamo.TabStop = False
+        '
+        'PbxSocio
+        '
+        Me.PbxSocio.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.Socio
+        Me.PbxSocio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbxSocio.Location = New System.Drawing.Point(164, 15)
+        Me.PbxSocio.Name = "PbxSocio"
+        Me.PbxSocio.Size = New System.Drawing.Size(52, 49)
+        Me.PbxSocio.TabIndex = 9
+        Me.PbxSocio.TabStop = False
+        '
+        'PbxOficial
+        '
+        Me.PbxOficial.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconOficial
+        Me.PbxOficial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbxOficial.Location = New System.Drawing.Point(164, 18)
+        Me.PbxOficial.Name = "PbxOficial"
+        Me.PbxOficial.Size = New System.Drawing.Size(52, 50)
+        Me.PbxOficial.TabIndex = 13
+        Me.PbxOficial.TabStop = False
+        '
+        'PbxLugarTrabajo
+        '
+        Me.PbxLugarTrabajo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconLugarTrabajo
+        Me.PbxLugarTrabajo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbxLugarTrabajo.Location = New System.Drawing.Point(23, 14)
+        Me.PbxLugarTrabajo.Name = "PbxLugarTrabajo"
+        Me.PbxLugarTrabajo.Size = New System.Drawing.Size(52, 50)
+        Me.PbxLugarTrabajo.TabIndex = 8
+        Me.PbxLugarTrabajo.TabStop = False
+        '
+        'PbxNacionalidad
+        '
+        Me.PbxNacionalidad.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconNacionalidad__2_
+        Me.PbxNacionalidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbxNacionalidad.Location = New System.Drawing.Point(164, 15)
+        Me.PbxNacionalidad.Name = "PbxNacionalidad"
+        Me.PbxNacionalidad.Size = New System.Drawing.Size(52, 49)
+        Me.PbxNacionalidad.TabIndex = 9
+        Me.PbxNacionalidad.TabStop = False
+        '
+        'PbxTipoPrestamo
+        '
+        Me.PbxTipoPrestamo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCargo
+        Me.PbxTipoPrestamo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbxTipoPrestamo.Location = New System.Drawing.Point(23, 14)
+        Me.PbxTipoPrestamo.Name = "PbxTipoPrestamo"
+        Me.PbxTipoPrestamo.Size = New System.Drawing.Size(52, 50)
+        Me.PbxTipoPrestamo.TabIndex = 8
+        Me.PbxTipoPrestamo.TabStop = False
+        '
+        'PbxRegistroPrestamo
+        '
+        Me.PbxRegistroPrestamo.BackColor = System.Drawing.Color.Transparent
+        Me.PbxRegistroPrestamo.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.icons8_caja_registradora_50
+        Me.PbxRegistroPrestamo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PbxRegistroPrestamo.Location = New System.Drawing.Point(12, 374)
+        Me.PbxRegistroPrestamo.Name = "PbxRegistroPrestamo"
+        Me.PbxRegistroPrestamo.Size = New System.Drawing.Size(55, 50)
+        Me.PbxRegistroPrestamo.TabIndex = 5
+        Me.PbxRegistroPrestamo.TabStop = False
         '
         'PbxCuentaSocio
         '
@@ -403,15 +398,6 @@ Partial Class FrmPrincipalAdmin
         Me.PbxUsuario.TabIndex = 1
         Me.PbxUsuario.TabStop = False
         '
-        'PCentral
-        '
-        Me.PCentral.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.PCentral.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PCentral.Location = New System.Drawing.Point(13, 38)
-        Me.PCentral.Name = "PCentral"
-        Me.PCentral.Size = New System.Drawing.Size(971, 551)
-        Me.PCentral.TabIndex = 21
-        '
         'PbxLogo
         '
         Me.PbxLogo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -422,6 +408,34 @@ Partial Class FrmPrincipalAdmin
         Me.PbxLogo.Size = New System.Drawing.Size(245, 71)
         Me.PbxLogo.TabIndex = 13
         Me.PbxLogo.TabStop = False
+        '
+        'BtnMinimizar
+        '
+        Me.BtnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnMinimizar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconMinimizar
+        Me.BtnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnMinimizar.FlatAppearance.BorderSize = 0
+        Me.BtnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
+        Me.BtnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnMinimizar.Location = New System.Drawing.Point(904, 3)
+        Me.BtnMinimizar.Name = "BtnMinimizar"
+        Me.BtnMinimizar.Size = New System.Drawing.Size(40, 35)
+        Me.BtnMinimizar.TabIndex = 5
+        Me.BtnMinimizar.UseVisualStyleBackColor = True
+        '
+        'BtnSalir
+        '
+        Me.BtnSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnSalir.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
+        Me.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnSalir.FlatAppearance.BorderSize = 0
+        Me.BtnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSalir.Location = New System.Drawing.Point(944, 3)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(40, 35)
+        Me.BtnSalir.TabIndex = 1
+        Me.BtnSalir.UseVisualStyleBackColor = True
         '
         'FrmPrincipalAdmin
         '
@@ -443,21 +457,22 @@ Partial Class FrmPrincipalAdmin
         Me.Text = "FrmPrincipalAdmin"
         Me.PanelSub4.ResumeLayout(False)
         Me.PanelSub4.PerformLayout()
-        CType(Me.PbxFinalidadPrestamo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelSub3.ResumeLayout(False)
         Me.PanelSub3.PerformLayout()
-        CType(Me.PbxOficial, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbxSocio, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbxLugarTrabajo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.PanelSub2.ResumeLayout(False)
         Me.PanelSub2.PerformLayout()
-        CType(Me.PbxNacionalidad, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbxTipoPrestamo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PUsuario.ResumeLayout(False)
         Me.PUsuario.PerformLayout()
         Me.PMenu.ResumeLayout(False)
+        CType(Me.PbxFinalidadPrestamo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxSocio, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxOficial, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxLugarTrabajo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxNacionalidad, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxTipoPrestamo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxRegistroPrestamo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxCuentaSocio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxSolicitudPrestamo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxIngresar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -497,5 +512,6 @@ Partial Class FrmPrincipalAdmin
     Friend WithEvents PbxUsuario As PictureBox
     Friend WithEvents PCentral As Panel
     Friend WithEvents PbxSolicitudPrestamo As PictureBox
+    Friend WithEvents PbxRegistroPrestamo As PictureBox
     Friend WithEvents PbxCuentaSocio As PictureBox
 End Class
