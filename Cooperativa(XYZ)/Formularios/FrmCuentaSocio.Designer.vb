@@ -29,6 +29,8 @@ Partial Class FrmCuentaSocio
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TpCuentaSocio = New System.Windows.Forms.TabPage()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TxtDescripcionTipoCuenta = New System.Windows.Forms.TextBox()
         Me.TxtCodSocio = New System.Windows.Forms.TextBox()
         Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -46,13 +48,12 @@ Partial Class FrmCuentaSocio
         Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.TxtNumCuenta = New System.Windows.Forms.TextBox()
         Me.TpListadoCuentasSocio = New System.Windows.Forms.TabPage()
-        Me.TxtBuscar = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.BtnCerrar2 = New System.Windows.Forms.Button()
         Me.LsvCuentaSocio = New System.Windows.Forms.ListView()
         Me.ChNumCuenta = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChCodSocio = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChIdTipoCuenta = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChDescripcionTipoCuenta = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChSaldo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChFechaApertura = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
@@ -108,6 +109,8 @@ Partial Class FrmCuentaSocio
         '
         'TpCuentaSocio
         '
+        Me.TpCuentaSocio.Controls.Add(Me.Label5)
+        Me.TpCuentaSocio.Controls.Add(Me.TxtDescripcionTipoCuenta)
         Me.TpCuentaSocio.Controls.Add(Me.TxtCodSocio)
         Me.TpCuentaSocio.Controls.Add(Me.BtnCerrar)
         Me.TpCuentaSocio.Controls.Add(Me.Label6)
@@ -131,6 +134,28 @@ Partial Class FrmCuentaSocio
         Me.TpCuentaSocio.TabIndex = 0
         Me.TpCuentaSocio.Text = "Datos de cuenta de socio"
         Me.TpCuentaSocio.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(470, 35)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(272, 24)
+        Me.Label5.TabIndex = 52
+        Me.Label5.Text = "Descripción de Tipo de Cuenta"
+        '
+        'TxtDescripcionTipoCuenta
+        '
+        Me.TxtDescripcionTipoCuenta.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtDescripcionTipoCuenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtDescripcionTipoCuenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtDescripcionTipoCuenta.Location = New System.Drawing.Point(474, 72)
+        Me.TxtDescripcionTipoCuenta.Multiline = True
+        Me.TxtDescripcionTipoCuenta.Name = "TxtDescripcionTipoCuenta"
+        Me.TxtDescripcionTipoCuenta.Size = New System.Drawing.Size(364, 120)
+        Me.TxtDescripcionTipoCuenta.TabIndex = 53
         '
         'TxtCodSocio
         '
@@ -175,6 +200,7 @@ Partial Class FrmCuentaSocio
         Me.TxtSaldo.Name = "TxtSaldo"
         Me.TxtSaldo.Size = New System.Drawing.Size(206, 29)
         Me.TxtSaldo.TabIndex = 34
+        Me.TxtSaldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label2
         '
@@ -316,9 +342,7 @@ Partial Class FrmCuentaSocio
         '
         'TpListadoCuentasSocio
         '
-        Me.TpListadoCuentasSocio.Controls.Add(Me.TxtBuscar)
-        Me.TpListadoCuentasSocio.Controls.Add(Me.Label11)
-        Me.TpListadoCuentasSocio.Controls.Add(Me.Button2)
+        Me.TpListadoCuentasSocio.Controls.Add(Me.BtnCerrar2)
         Me.TpListadoCuentasSocio.Controls.Add(Me.LsvCuentaSocio)
         Me.TpListadoCuentasSocio.Location = New System.Drawing.Point(4, 27)
         Me.TpListadoCuentasSocio.Name = "TpListadoCuentasSocio"
@@ -328,43 +352,24 @@ Partial Class FrmCuentaSocio
         Me.TpListadoCuentasSocio.Text = "Listado de cuentas de socio"
         Me.TpListadoCuentasSocio.UseVisualStyleBackColor = True
         '
-        'TxtBuscar
+        'BtnCerrar2
         '
-        Me.TxtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtBuscar.Location = New System.Drawing.Point(362, 29)
-        Me.TxtBuscar.Name = "TxtBuscar"
-        Me.TxtBuscar.Size = New System.Drawing.Size(206, 29)
-        Me.TxtBuscar.TabIndex = 53
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(273, 32)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(68, 24)
-        Me.Label11.TabIndex = 52
-        Me.Label11.Text = "Buscar"
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button2.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(922, 1)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(37, 33)
-        Me.Button2.TabIndex = 51
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.BtnCerrar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnCerrar2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnCerrar2.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
+        Me.BtnCerrar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar2.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnCerrar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar2.Location = New System.Drawing.Point(922, 1)
+        Me.BtnCerrar2.Name = "BtnCerrar2"
+        Me.BtnCerrar2.Size = New System.Drawing.Size(37, 33)
+        Me.BtnCerrar2.TabIndex = 51
+        Me.BtnCerrar2.UseVisualStyleBackColor = False
         '
         'LsvCuentaSocio
         '
-        Me.LsvCuentaSocio.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChNumCuenta, Me.ChCodSocio, Me.ChIdTipoCuenta, Me.ChSaldo, Me.ChFechaApertura})
+        Me.LsvCuentaSocio.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChNumCuenta, Me.ChCodSocio, Me.ChIdTipoCuenta, Me.ChDescripcionTipoCuenta, Me.ChSaldo, Me.ChFechaApertura})
         Me.LsvCuentaSocio.ContextMenuStrip = Me.CmsOpciones
         Me.LsvCuentaSocio.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.LsvCuentaSocio.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -392,6 +397,11 @@ Partial Class FrmCuentaSocio
         '
         Me.ChIdTipoCuenta.Text = "Tipo de Cuenta"
         Me.ChIdTipoCuenta.Width = 150
+        '
+        'ChDescripcionTipoCuenta
+        '
+        Me.ChDescripcionTipoCuenta.Text = "Descripción de Tipo de Cuenta"
+        Me.ChDescripcionTipoCuenta.Width = 300
         '
         'ChSaldo
         '
@@ -423,7 +433,6 @@ Partial Class FrmCuentaSocio
         Me.TpCuentaSocio.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TpListadoCuentasSocio.ResumeLayout(False)
-        Me.TpListadoCuentasSocio.PerformLayout()
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -457,8 +466,9 @@ Partial Class FrmCuentaSocio
     Friend WithEvents ChIdTipoCuenta As ColumnHeader
     Friend WithEvents ChSaldo As ColumnHeader
     Friend WithEvents ChFechaApertura As ColumnHeader
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TxtBuscar As TextBox
-    Friend WithEvents Label11 As Label
+    Friend WithEvents BtnCerrar2 As Button
     Friend WithEvents TxtCodSocio As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TxtDescripcionTipoCuenta As TextBox
+    Friend WithEvents ChDescripcionTipoCuenta As ColumnHeader
 End Class

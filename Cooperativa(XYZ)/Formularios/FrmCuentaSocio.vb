@@ -9,41 +9,49 @@ Public Class FrmCuentaSocio
                                  ByVal Guardar As Boolean,
                                  ByVal Modificar As Boolean,
                                  ByVal Cancelar As Boolean,
-                                 ByVal Salir As Boolean)
+                                 ByVal Salir As Boolean,
+                                 ByVal Salir2 As Boolean)
         BtnNuevo.Enabled = Nuevo
         BtnGuardar.Enabled = Guardar
         BtnModificar.Enabled = Modificar
         BtnCancelar.Enabled = Cancelar
         BtnCerrar.Enabled = Salir
+        BtnCerrar2.Enabled = Salir2
     End Sub
 
     Private Sub HabilitarTextBox(ByVal NumCuenta As Boolean,
                                  ByVal CodSocio As Boolean,
                                  ByVal TipoCuenta As Boolean,
+                                 ByVal DescripcionTipoCuenta As Boolean,
                                  ByVal Saldo As Boolean,
                                  ByVal FechaApertura As Boolean)
         TxtNumCuenta.Enabled = NumCuenta
         TxtCodSocio.Enabled = CodSocio
         CboTipoCuenta.Enabled = TipoCuenta
+        TxtDescripcionTipoCuenta.Enabled = DescripcionTipoCuenta
         TxtSaldo.Enabled = Saldo
         DtpFechaApertura.Enabled = FechaApertura
 
     End Sub
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
-        HabilitarBotones(False, True, False, True, True)
-        HabilitarTextBox(True, True, True, True, True)
+        HabilitarBotones(False, True, False, True, True, True)
+        HabilitarTextBox(True, True, True, True, True, True)
 
     End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
-        HabilitarBotones(True, False, False, False, True)
+        HabilitarBotones(True, False, False, False, True, True)
 
         If ValidarTextBox() = True Then
             GuardarCuentaSocio()
             Limpiar()
-            HabilitarBotones(True, False, False, False, True)
-            HabilitarTextBox(False, False, False, False, False)
+            HabilitarBotones(True, False, False, False, True, True)
+            HabilitarTextBox(False, False, False, False, False, False)
+            MostrarTodo()
+        Else
+            Limpiar()
+            HabilitarBotones(False, True, False, True, True, True)
             MostrarTodo()
         End If
 
@@ -51,12 +59,10 @@ Public Class FrmCuentaSocio
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
         If ValidarTextBox() = True Then
-            HabilitarBotones(True, False, False, False, True)
+            HabilitarBotones(True, False, False, False, True, True)
             If Cn.State = ConnectionState.Open Then
                 Cn.Close()
             End If
-
-            Dim Saldo As Double
 
             Try
                 Cn.Open()
@@ -68,7 +74,8 @@ Public Class FrmCuentaSocio
                         .Parameters.Add("@NumCuenta", SqlDbType.VarChar, 19).Value = TxtNumCuenta.Text
                         .Parameters.Add("@CodSocio", SqlDbType.VarChar, 15).Value = TxtCodSocio.Text
                         .Parameters.Add("@IdTipoCuenta", SqlDbType.Int).Value = CboTipoCuenta.SelectedValue
-                        .Parameters.Add("@SaldoActual", SqlDbType.Money).Value = Convert.ToDouble(Saldo)
+                        .Parameters.Add("@DescripcionTipoCuenta", SqlDbType.NVarChar, 100).Value = TxtDescripcionTipoCuenta.Text
+                        .Parameters.Add("@SaldoActual", SqlDbType.Decimal, 8, 2).Value = CDec(TxtSaldo.Text)
                         .Parameters.Add("@FechaApertura", SqlDbType.Date).Value = Convert.ToDateTime(DtpFechaApertura.Text)
                         .ExecuteNonQuery()
 
@@ -82,6 +89,7 @@ Public Class FrmCuentaSocio
             Finally
                 Cn.Close()
             End Try
+
             MostrarTodo()
             Limpiar()
         End If
@@ -92,12 +100,14 @@ Public Class FrmCuentaSocio
         Close()
     End Sub
 
+    Private Sub BtnCerrar2_Click(sender As Object, e As EventArgs) Handles BtnCerrar2.Click
+        Close()
+    End Sub
+
     Private Sub GuardarCuentaSocio()
         If Cn.State = ConnectionState.Open Then
             Cn.Close()
         End If
-
-        Dim Saldo As Double
 
         Try
             Cn.Open()
@@ -110,7 +120,8 @@ Public Class FrmCuentaSocio
                     .Parameters.Add("@NumCuenta", SqlDbType.VarChar, 19).Value = TxtNumCuenta.Text
                     .Parameters.Add("@CodSocio", SqlDbType.VarChar, 15).Value = TxtCodSocio.Text
                     .Parameters.Add("@IdTipoCuenta", SqlDbType.Int).Value = CboTipoCuenta.SelectedValue
-                    .Parameters.Add("@SaldoActual", SqlDbType.Money).Value = Convert.ToDouble(Saldo)
+                    .Parameters.Add("@DescripcionTipoCuenta", SqlDbType.NVarChar, 100).Value = TxtDescripcionTipoCuenta.Text
+                    .Parameters.Add("@SaldoActual", SqlDbType.Decimal, 8, 2).Value = CDec(TxtSaldo.Text)
                     .Parameters.Add("@FechaApertura", SqlDbType.Date).Value = Convert.ToDateTime(DtpFechaApertura.Text)
                     .ExecuteNonQuery()
 
@@ -150,8 +161,9 @@ Public Class FrmCuentaSocio
                 While VerCuentaSocio.Read = True
                     With LsvCuentaSocio.Items.Add(VerCuentaSocio("NumCuenta").ToString)
                         .SubItems.Add(VerCuentaSocio("CodSocio")).ToString()
-                        .SubItems.Add(VerCuentaSocio("IdTipoCuenta")).ToString()
-                        .SubItems.Add(VerCuentaSocio("Saldo")).ToString()
+                        .SubItems.Add(VerCuentaSocio("TipoCuenta")).ToString()
+                        .SubItems.Add(VerCuentaSocio("DescripcionTipoCuenta")).ToString()
+                        .SubItems.Add(VerCuentaSocio("SaldoActual")).ToString()
                         .SubItems.Add(VerCuentaSocio("FechaApertura")).ToString()
                     End With
                 End While
@@ -168,9 +180,10 @@ Public Class FrmCuentaSocio
     Private Function ValidarTextBox()
         Dim Estado As Boolean
 
-        If TxtNumCuenta.Text = Nothing And TxtCodSocio.Text = Nothing And CboTipoCuenta.Text = Nothing And TxtSaldo.Text = Nothing Then
+        If TxtNumCuenta.Text = Nothing And TxtCodSocio.Text = Nothing And CboTipoCuenta.Text = Nothing And TxtDescripcionTipoCuenta.Text = Nothing And TxtSaldo.Text = Nothing Then
             EpMensaje.SetError(TxtNumCuenta, "Tiene que ingresar el número de cuenta")
             EpMensaje.SetError(CboTipoCuenta, "Tiene que seleccionar un tipo de cuenta")
+            EpMensaje.SetError(TxtDescripcionTipoCuenta, "Tiene que agregar una descripción a tipo de cuenta")
             EpMensaje.SetError(TxtSaldo, "Tiene que ingresar el saldo")
         ElseIf TxtNumCuenta.Text = Nothing Then
             EpMensaje.SetError(TxtNumCuenta, "Tiene que ingresar el número de cuenta")
@@ -180,6 +193,11 @@ Public Class FrmCuentaSocio
         ElseIf CboTipoCuenta.Text = Nothing Then
             EpMensaje.SetError(CboTipoCuenta, "Tiene que ingresar un tipo de cuenta")
             CboTipoCuenta.BackColor = Color.LightBlue
+            Estado = False
+        ElseIf TxtDescripcionTipoCuenta.Text = Nothing Then
+            EpMensaje.SetError(TxtDescripcionTipoCuenta, "Tiene que agregar una descripción a tipo de cuenta")
+            TxtDescripcionTipoCuenta.Focus()
+            TxtDescripcionTipoCuenta.BackColor = Color.LightBlue
             Estado = False
         ElseIf TxtSaldo.Text = Nothing Then
             EpMensaje.SetError(TxtSaldo, "Tiene que ingresar el saldo")
@@ -199,6 +217,7 @@ Public Class FrmCuentaSocio
         TxtNumCuenta.Text = Nothing
         TxtCodSocio.Text = Nothing
         CboTipoCuenta.Text = ""
+        TxtDescripcionTipoCuenta.Text = Nothing
         TxtSaldo.Text = Nothing
 
     End Sub
@@ -222,6 +241,13 @@ Public Class FrmCuentaSocio
 
     End Sub
 
+    Private Sub TxtDescripcionTipoCuenta_Changed(sender As Object, e As EventArgs) Handles TxtDescripcionTipoCuenta.TextChanged
+        If TxtDescripcionTipoCuenta.Text <> Nothing Then
+            EpMensaje.SetError(TxtDescripcionTipoCuenta, "")
+            TxtDescripcionTipoCuenta.BackColor = Color.White
+        End If
+    End Sub
+
     Private Sub TxtSaldo_TextChanged(sender As Object, e As EventArgs) Handles TxtSaldo.TextChanged
         If TxtSaldo.Text <> Nothing Then
             EpMensaje.SetError(TxtSaldo, "")
@@ -229,13 +255,15 @@ Public Class FrmCuentaSocio
         End If
     End Sub
 
-
-
     Private Sub ToolStripMenuItemEditar_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItemEditar.Click
-        HabilitarBotones(False, False, True, True, True)
+        HabilitarBotones(False, False, True, True, True, True)
+        HabilitarTextBox(True, True, True, True, True, False)
         TxtNumCuenta.Text = LsvCuentaSocio.FocusedItem.SubItems(0).Text
+        TxtCodSocio.Text = LsvCuentaSocio.FocusedItem.SubItems(1).Text
         CboTipoCuenta.Text = LsvCuentaSocio.FocusedItem.SubItems(2).Text
-        TxtSaldo.Text = LsvCuentaSocio.FocusedItem.SubItems(3).Text
+        TxtDescripcionTipoCuenta.Text = LsvCuentaSocio.FocusedItem.SubItems(3).Text
+        TxtSaldo.Text = LsvCuentaSocio.FocusedItem.SubItems(4).Text
+        TabControl1.SelectedIndex = 0
     End Sub
 
     Private Sub EliminarCuentaSocio()
@@ -254,7 +282,7 @@ Public Class FrmCuentaSocio
                     Dim Id As String
 
                     Id = LsvCuentaSocio.FocusedItem.SubItems(0).Text
-                    .Parameters.Add("@CodSocio", SqlDbType.NVarChar).Value = Id
+                    .Parameters.Add("@NumCuenta", SqlDbType.VarChar).Value = Id
                     .ExecuteNonQuery()
 
                     MessageBox.Show("Registro eliminado satisfactoriamente", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -269,64 +297,72 @@ Public Class FrmCuentaSocio
         End Try
     End Sub
 
-    Private Sub TxtNumCuenta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtNumCuenta.KeyPress
-        If Char.IsDigit(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-            MessageBox.Show("No se permite ingresar letras o caracteres especiales", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
-    End Sub
 
-    Private Sub TxtCodSocio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCodSocio.KeyPress
-        If Char.IsDigit(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-            MessageBox.Show("No se permite ingresar letras o caracteres especiales", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
-    End Sub
+    'Private Sub TxtNumCuenta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtNumCuenta.KeyPress
+    '    If Char.IsDigit(e.KeyChar) Then
+    '        e.Handled = False
+    '    ElseIf Char.IsControl(e.KeyChar) Then
+    '        e.Handled = False
+    '    Else
+    '        e.Handled = True
+    '        MessageBox.Show("No se permite ingresar letras o caracteres especiales", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    '    End If
+    'End Sub
 
-    Private Sub TxtSaldo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtSaldo.KeyPress
-        If Char.IsDigit(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-            MessageBox.Show("No se permite ingresar letras o caracteres especiales", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
-    End Sub
+    'Private Sub TxtCodSocio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCodSocio.KeyPress
+    '    If Char.IsDigit(e.KeyChar) Then
+    '        e.Handled = False
+    '    ElseIf Char.IsControl(e.KeyChar) Then
+    '        e.Handled = False
+    '    Else
+    '        e.Handled = True
+    '        MessageBox.Show("No se permite ingresar letras o caracteres especiales", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    '    End If
+    'End Sub
+
+    'Private Sub TxtDescripcionTipoCuenta_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtDescripcionTipoCuenta.KeyPress
+    '    If Char.IsLetter(e.KeyChar) Then
+    '        e.Handled = False
+    '    ElseIf Char.IsControl(e.KeyChar) Then
+    '        e.Handled = False
+    '    ElseIf Char.IsSeparator(e.KeyChar) Then
+    '        e.Handled = False
+    '    Else
+    '        e.Handled = True
+    '        MessageBox.Show("No se permite ingresar números o caracteres especiales", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    '    End If
+    'End Sub
+
+    'Private Sub TxtSaldo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtSaldo.KeyPress
+    '    If Char.IsDigit(e.KeyChar) Then
+    '        e.Handled = False
+    '    ElseIf Char.IsControl(e.KeyChar) Then
+    '        e.Handled = False
+    '    Else
+    '        e.Handled = True
+    '        MessageBox.Show("No se permite ingresar letras o caracteres especiales", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    '    End If
+    'End Sub
 
     Private Sub ToolStripMenuItemEliminar_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItemEliminar.Click
         EliminarCuentaSocio()
         MostrarTodo()
-        HabilitarBotones(True, False, False, False, True)
+        HabilitarBotones(True, False, False, False, True, True)
     End Sub
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
-        HabilitarBotones(True, False, False, False, True)
+        HabilitarBotones(True, False, False, False, True, True)
         Limpiar()
 
     End Sub
 
     Private Sub CuentaSocio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        HabilitarBotones(True, False, False, False, True)
-        HabilitarTextBox(False, False, False, False, False)
+        HabilitarBotones(True, False, False, False, True, True)
+        HabilitarTextBox(False, False, False, False, False, False)
         ComboBoxTipoCuenta()
         CboTipoCuenta.Text = Nothing
+        MostrarTodo()
 
-    End Sub
-
-    Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        HabilitarBotones(False, False, True, True, True)
-        TxtNumCuenta.Text = LsvCuentaSocio.FocusedItem.SubItems(0).Text
-        CboTipoCuenta.Text = LsvCuentaSocio.FocusedItem.SubItems(2).Text
-        TxtSaldo.Text = LsvCuentaSocio.FocusedItem.SubItems(3).Text
     End Sub
 
     Private Sub ComboBoxTipoCuenta()
@@ -347,4 +383,6 @@ Public Class FrmCuentaSocio
         End With
 
     End Sub
+
+
 End Class
