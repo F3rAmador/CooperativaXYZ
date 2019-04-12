@@ -65,7 +65,7 @@ Public Class FrmOficial
                         .CommandText = "Sp_ActualizarOficialCredito"
                         .CommandType = CommandType.StoredProcedure
                         .Connection = Cn
-                        .Parameters.Add("@NumIdentidad", SqlDbType.VarChar, 15).Value = TxtNumIdentidad.Text
+                        .Parameters.Add("@CodOficial", SqlDbType.VarChar, 15).Value = TxtNumIdentidad.Text
                         .Parameters.Add("@Nombre", SqlDbType.NVarChar, 50).Value = TxtNombre.Text
                         .Parameters.Add("@Apellidos", SqlDbType.NVarChar, 50).Value = TxtApellidos.Text
                         .Parameters.Add("@Telefono", SqlDbType.Char, 9).Value = TxtTelefono.Text
@@ -104,7 +104,7 @@ Public Class FrmOficial
                     .CommandText = "Sp_InsertarOficialCredito"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
-                    .Parameters.Add("@NumIdentidad", SqlDbType.VarChar, 15).Value = TxtNumIdentidad.Text
+                    .Parameters.Add("@CodOficial", SqlDbType.VarChar, 15).Value = TxtNumIdentidad.Text
                     .Parameters.Add("@Nombre", SqlDbType.NVarChar, 50).Value = TxtNombre.Text
                     .Parameters.Add("@Apellidos", SqlDbType.NVarChar, 50).Value = TxtApellidos.Text
                     .Parameters.Add("@Telefono", SqlDbType.Char, 9).Value = TxtTelefono.Text
@@ -145,7 +145,7 @@ Public Class FrmOficial
                 LsvOficialCredito.Items.Clear()
 
                 While VerTipoPrestamo.Read = True
-                    With LsvOficialCredito.Items.Add(VerTipoPrestamo("NumIdentidad").ToString)
+                    With LsvOficialCredito.Items.Add(VerTipoPrestamo("CodOficial").ToString)
                         .SubItems.Add(VerTipoPrestamo("Nombres")).ToString()
                         .SubItems.Add(VerTipoPrestamo("Apellidos")).ToString()
                         .SubItems.Add(VerTipoPrestamo("Teléfono")).ToString()
@@ -261,7 +261,7 @@ Public Class FrmOficial
                     Dim Id As String
 
                     Id = LsvOficialCredito.FocusedItem.SubItems(0).Text
-                    .Parameters.Add("@NumIdentidad", SqlDbType.VarChar, 15).Value = Id
+                    .Parameters.Add("@CodOficial", SqlDbType.VarChar, 15).Value = Id
                     .ExecuteNonQuery()
 
                     MessageBox.Show("Registro eliminado satisfactoriamente", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)

@@ -74,6 +74,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Connection.vb" />
+    <Compile Include="Formularios\FrmBuscarOficial.Designer.vb">
+      <DependentUpon>FrmBuscarOficial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmBuscarOficial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmBuscarSocio.Designer.vb">
+      <DependentUpon>FrmBuscarSocio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmBuscarSocio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmFinalidadPrestamo.Designer.vb">
       <DependentUpon>FrmFinalidadPrestamo.vb</DependentUpon>
     </Compile>
@@ -140,6 +152,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\FrmBuscarOficial.resx">
+      <DependentUpon>FrmBuscarOficial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmBuscarSocio.resx">
+      <DependentUpon>FrmBuscarSocio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmFinalidadPrestamo.resx">
       <DependentUpon>FrmFinalidadPrestamo.vb</DependentUpon>
     </EmbeddedResource>
