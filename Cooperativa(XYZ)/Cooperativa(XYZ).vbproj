@@ -231,5 +231,14 @@
   <ItemGroup>
     <None Include="Resources\IconFinalidadPrestamo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconMinimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconUsuario %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AgregarDatosBD2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

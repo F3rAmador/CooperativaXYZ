@@ -139,6 +139,12 @@
   <data name="IconOficial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconOficial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IconMinimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconMinimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconUsuario (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconUsuario (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IconNacionalidad (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconNacionalidad (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,13 +157,16 @@
   <data name="IconCerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconCerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IconFinalidadPrestamo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconFinalidadPrestamo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Socio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Socio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LogoCooperativa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoCooperativa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconFinalidadPrestamo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconFinalidadPrestamo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AgregarDatosBD2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AgregarDatosBD2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -64,7 +64,7 @@
 
     End Sub
 
-    Private Sub PCentral_MouseLeave(sender As Object, e As EventArgs) Handles PCentral.MouseEnter
+    Private Sub PCentral_MouseHover(sender As Object, e As EventArgs) Handles PCentral.MouseHover
         Do While PMenu.Width > 9
             PMenu.Width -= 5
             System.Threading.Thread.Sleep(10)

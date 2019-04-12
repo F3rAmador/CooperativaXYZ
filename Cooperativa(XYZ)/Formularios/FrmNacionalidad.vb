@@ -260,7 +260,14 @@ Public Class FrmNacionalidad
         TxtNacionalidad.Text = LsvLugarTrabajo.FocusedItem.SubItems(1).Text
     End Sub
 
-    Private Sub PCentarl_Paint(sender As Object, e As PaintEventArgs) Handles PCentarl.Paint
+
+
+
+    Private Sub PCentarl_MouseHover(sender As Object, e As EventArgs) Handles PCentarl.MouseHover
+        FrmPrincipalAdmin.PanelSub1.Visible = False
+        FrmPrincipalAdmin.PanelSub2.Visible = False
+        FrmPrincipalAdmin.PanelSub3.Visible = False
+        FrmPrincipalAdmin.PanelSub4.Visible = False
         Do While FrmPrincipalAdmin.PMenu.Width > 9
             FrmPrincipalAdmin.PMenu.Width -= 5
             System.Threading.Thread.Sleep(10)
@@ -268,7 +275,11 @@ Public Class FrmNacionalidad
         Loop
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+    Private Sub GroupBox1_MouseHover(sender As Object, e As EventArgs) Handles GroupBox1.MouseHover
+        FrmPrincipalAdmin.PanelSub1.Visible = False
+        FrmPrincipalAdmin.PanelSub2.Visible = False
+        FrmPrincipalAdmin.PanelSub3.Visible = False
+        FrmPrincipalAdmin.PanelSub4.Visible = False
         Do While FrmPrincipalAdmin.PMenu.Width > 9
             FrmPrincipalAdmin.PMenu.Width -= 5
             System.Threading.Thread.Sleep(10)

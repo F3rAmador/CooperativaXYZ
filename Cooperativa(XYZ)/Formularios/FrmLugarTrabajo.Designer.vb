@@ -23,7 +23,6 @@ Partial Class FrmLugarTrabajo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.PCentarl = New System.Windows.Forms.Panel()
@@ -43,22 +42,12 @@ Partial Class FrmLugarTrabajo
         Me.TxtIdLugarTrabajo = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.Panel1.SuspendLayout()
         Me.PCentarl.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsOpciones.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Panel1.Controls.Add(Me.BtnCerrar)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(968, 40)
-        Me.Panel1.TabIndex = 21
         '
         'BtnCerrar
         '
@@ -69,7 +58,7 @@ Partial Class FrmLugarTrabajo
         Me.BtnCerrar.FlatAppearance.BorderSize = 0
         Me.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCerrar.Location = New System.Drawing.Point(930, 4)
+        Me.BtnCerrar.Location = New System.Drawing.Point(931, 8)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Size = New System.Drawing.Size(37, 33)
         Me.BtnCerrar.TabIndex = 13
@@ -242,7 +231,7 @@ Partial Class FrmLugarTrabajo
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GroupBox1.Controls.Add(Me.Panel1)
+        Me.GroupBox1.Controls.Add(Me.BtnCerrar)
         Me.GroupBox1.Controls.Add(Me.BtnCancelar)
         Me.GroupBox1.Controls.Add(Me.BtnModificar)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -272,7 +261,6 @@ Partial Class FrmLugarTrabajo
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmLugarTrabajo"
         Me.Text = "FrmLugarTrabajo"
-        Me.Panel1.ResumeLayout(False)
         Me.PCentarl.ResumeLayout(False)
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsOpciones.ResumeLayout(False)
@@ -282,8 +270,6 @@ Partial Class FrmLugarTrabajo
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents BtnCerrar As Button
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents PCentarl As Panel
