@@ -74,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Connection.vb" />
+    <Compile Include="Formularios\FrmLugarTrabajo.Designer.vb">
+      <DependentUpon>FrmLugarTrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmLugarTrabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmNacionalidad.Designer.vb">
       <DependentUpon>FrmNacionalidad.vb</DependentUpon>
     </Compile>
@@ -116,6 +122,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\FrmLugarTrabajo.resx">
+      <DependentUpon>FrmLugarTrabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmNacionalidad.resx">
+      <DependentUpon>FrmNacionalidad.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmSocio.resx">
       <DependentUpon>FrmSocio.vb</DependentUpon>
     </EmbeddedResource>

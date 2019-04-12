@@ -1,8 +1,8 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmNacionalidad
+Partial Class FrmLugarTrabajo
     Inherits System.Windows.Forms.Form
 
-    'Form reemplaza a Dispose para limpiar la lista de componentes.
+    'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -14,57 +14,91 @@ Partial Class FrmNacionalidad
         End Try
     End Sub
 
-    'Requerido por el Diseñador de Windows Forms
+    'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
-    'Se puede modificar usando el Diseñador de Windows Forms.  
-    'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.TxtIdNacionalidad = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.PCentarl = New System.Windows.Forms.Panel()
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
         Me.LsvLugarTrabajo = New System.Windows.Forms.ListView()
-        Me.ChIdNacionalidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChNacionalidad = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChIdLugarTrabajo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChLugarTrabajo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CmsOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItemEditar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItemEliminar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnNuevo = New System.Windows.Forms.Button()
-        Me.TxtNacionalidad = New System.Windows.Forms.TextBox()
-        Me.PCentarl = New System.Windows.Forms.Panel()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
+        Me.TxtLugarTrabajo = New System.Windows.Forms.TextBox()
+        Me.TxtIdLugarTrabajo = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Panel1.SuspendLayout()
+        Me.PCentarl.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsOpciones.SuspendLayout()
-        Me.PCentarl.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'EpMensaje
+        'Panel1
         '
-        Me.EpMensaje.ContainerControl = Me
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Panel1.Controls.Add(Me.BtnCerrar)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(968, 40)
+        Me.Panel1.TabIndex = 21
         '
-        'TxtIdNacionalidad
+        'BtnCerrar
         '
-        Me.TxtIdNacionalidad.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TxtIdNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtIdNacionalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdNacionalidad.Location = New System.Drawing.Point(407, 53)
-        Me.TxtIdNacionalidad.Name = "TxtIdNacionalidad"
-        Me.TxtIdNacionalidad.ReadOnly = True
-        Me.TxtIdNacionalidad.Size = New System.Drawing.Size(167, 29)
-        Me.TxtIdNacionalidad.TabIndex = 10
+        Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnCerrar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.Location = New System.Drawing.Point(930, 4)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(37, 33)
+        Me.BtnCerrar.TabIndex = 13
+        Me.BtnCerrar.UseVisualStyleBackColor = False
+        '
+        'BtnCancelar
+        '
+        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BtnCancelar.Enabled = False
+        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCancelar.Image = Global.Cooperativa_XYZ_.My.Resources.Resources.cancelar
+        Me.BtnCancelar.Location = New System.Drawing.Point(658, 150)
+        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(39, 43)
+        Me.BtnCancelar.TabIndex = 20
+        Me.BtnCancelar.UseVisualStyleBackColor = False
+        '
+        'PCentarl
+        '
+        Me.PCentarl.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PCentarl.Controls.Add(Me.PbxLogo)
+        Me.PCentarl.Controls.Add(Me.LsvLugarTrabajo)
+        Me.PCentarl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PCentarl.Location = New System.Drawing.Point(0, 208)
+        Me.PCentarl.Name = "PCentarl"
+        Me.PCentarl.Size = New System.Drawing.Size(968, 300)
+        Me.PCentarl.TabIndex = 20
         '
         'PbxLogo
         '
@@ -80,7 +114,7 @@ Partial Class FrmNacionalidad
         'LsvLugarTrabajo
         '
         Me.LsvLugarTrabajo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.LsvLugarTrabajo.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdNacionalidad, Me.ChNacionalidad})
+        Me.LsvLugarTrabajo.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdLugarTrabajo, Me.ChLugarTrabajo})
         Me.LsvLugarTrabajo.ContextMenuStrip = Me.CmsOpciones
         Me.LsvLugarTrabajo.FullRowSelect = True
         Me.LsvLugarTrabajo.GridLines = True
@@ -91,15 +125,15 @@ Partial Class FrmNacionalidad
         Me.LsvLugarTrabajo.UseCompatibleStateImageBehavior = False
         Me.LsvLugarTrabajo.View = System.Windows.Forms.View.Details
         '
-        'ChIdNacionalidad
+        'ChIdLugarTrabajo
         '
-        Me.ChIdNacionalidad.Text = "Código Nacionalidad"
-        Me.ChIdNacionalidad.Width = 100
+        Me.ChIdLugarTrabajo.Text = "LugarTrabajo"
+        Me.ChIdLugarTrabajo.Width = 100
         '
-        'ChNacionalidad
+        'ChLugarTrabajo
         '
-        Me.ChNacionalidad.Text = "Nacionalidad"
-        Me.ChNacionalidad.Width = 200
+        Me.ChLugarTrabajo.Text = "Lugar de Trabajo"
+        Me.ChLugarTrabajo.Width = 200
         '
         'CmsOpciones
         '
@@ -119,21 +153,6 @@ Partial Class FrmNacionalidad
         Me.ToolStripMenuItemEliminar.Name = "ToolStripMenuItemEliminar"
         Me.ToolStripMenuItemEliminar.Size = New System.Drawing.Size(117, 22)
         Me.ToolStripMenuItemEliminar.Text = "Eliminar"
-        '
-        'BtnCerrar
-        '
-        Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.BtnCerrar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
-        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnCerrar.FlatAppearance.BorderSize = 0
-        Me.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCerrar.Location = New System.Drawing.Point(930, 4)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(37, 33)
-        Me.BtnCerrar.TabIndex = 13
-        Me.BtnCerrar.UseVisualStyleBackColor = False
         '
         'BtnModificar
         '
@@ -155,9 +174,9 @@ Partial Class FrmNacionalidad
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(198, 58)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(191, 24)
+        Me.Label4.Size = New System.Drawing.Size(198, 24)
         Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Código Nacionalidad:"
+        Me.Label4.Text = "Código Lugar Trabajo:"
         '
         'BtnGuardar
         '
@@ -179,9 +198,9 @@ Partial Class FrmNacionalidad
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(198, 106)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(125, 24)
+        Me.Label3.Size = New System.Drawing.Size(159, 24)
         Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Nacionalidad:"
+        Me.Label3.Text = "Lugar de Trabajo:"
         '
         'BtnNuevo
         '
@@ -197,42 +216,28 @@ Partial Class FrmNacionalidad
         Me.BtnNuevo.TabIndex = 17
         Me.BtnNuevo.UseVisualStyleBackColor = True
         '
-        'TxtNacionalidad
+        'TxtLugarTrabajo
         '
-        Me.TxtNacionalidad.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TxtNacionalidad.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.TxtNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtNacionalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtNacionalidad.Location = New System.Drawing.Point(407, 101)
-        Me.TxtNacionalidad.Name = "TxtNacionalidad"
-        Me.TxtNacionalidad.ReadOnly = True
-        Me.TxtNacionalidad.Size = New System.Drawing.Size(223, 29)
-        Me.TxtNacionalidad.TabIndex = 11
+        Me.TxtLugarTrabajo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtLugarTrabajo.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.TxtLugarTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtLugarTrabajo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtLugarTrabajo.Location = New System.Drawing.Point(407, 101)
+        Me.TxtLugarTrabajo.Name = "TxtLugarTrabajo"
+        Me.TxtLugarTrabajo.ReadOnly = True
+        Me.TxtLugarTrabajo.Size = New System.Drawing.Size(223, 29)
+        Me.TxtLugarTrabajo.TabIndex = 11
         '
-        'PCentarl
+        'TxtIdLugarTrabajo
         '
-        Me.PCentarl.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.PCentarl.Controls.Add(Me.PbxLogo)
-        Me.PCentarl.Controls.Add(Me.LsvLugarTrabajo)
-        Me.PCentarl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PCentarl.Location = New System.Drawing.Point(0, 208)
-        Me.PCentarl.Name = "PCentarl"
-        Me.PCentarl.Size = New System.Drawing.Size(968, 300)
-        Me.PCentarl.TabIndex = 18
-        '
-        'BtnCancelar
-        '
-        Me.BtnCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.BtnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BtnCancelar.Enabled = False
-        Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelar.Image = Global.Cooperativa_XYZ_.My.Resources.Resources.cancelar
-        Me.BtnCancelar.Location = New System.Drawing.Point(658, 150)
-        Me.BtnCancelar.Margin = New System.Windows.Forms.Padding(2)
-        Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(39, 43)
-        Me.BtnCancelar.TabIndex = 20
-        Me.BtnCancelar.UseVisualStyleBackColor = False
+        Me.TxtIdLugarTrabajo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtIdLugarTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtIdLugarTrabajo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtIdLugarTrabajo.Location = New System.Drawing.Point(407, 53)
+        Me.TxtIdLugarTrabajo.Name = "TxtIdLugarTrabajo"
+        Me.TxtIdLugarTrabajo.ReadOnly = True
+        Me.TxtIdLugarTrabajo.Size = New System.Drawing.Size(167, 29)
+        Me.TxtIdLugarTrabajo.TabIndex = 10
         '
         'GroupBox1
         '
@@ -244,25 +249,20 @@ Partial Class FrmNacionalidad
         Me.GroupBox1.Controls.Add(Me.BtnGuardar)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.BtnNuevo)
-        Me.GroupBox1.Controls.Add(Me.TxtIdNacionalidad)
-        Me.GroupBox1.Controls.Add(Me.TxtNacionalidad)
+        Me.GroupBox1.Controls.Add(Me.TxtIdLugarTrabajo)
+        Me.GroupBox1.Controls.Add(Me.TxtLugarTrabajo)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(968, 208)
-        Me.GroupBox1.TabIndex = 17
+        Me.GroupBox1.TabIndex = 19
         Me.GroupBox1.TabStop = False
         '
-        'Panel1
+        'EpMensaje
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Panel1.Controls.Add(Me.BtnCerrar)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(968, 40)
-        Me.Panel1.TabIndex = 21
+        Me.EpMensaje.ContainerControl = Me
         '
-        'FrmNacionalidad
+        'FrmLugarTrabajo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -270,37 +270,37 @@ Partial Class FrmNacionalidad
         Me.Controls.Add(Me.PCentarl)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "FrmNacionalidad"
-        Me.Text = "FrmNacionalidad"
-        CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Name = "FrmLugarTrabajo"
+        Me.Text = "FrmLugarTrabajo"
+        Me.Panel1.ResumeLayout(False)
+        Me.PCentarl.ResumeLayout(False)
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsOpciones.ResumeLayout(False)
-        Me.PCentarl.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
+        CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents EpMensaje As ErrorProvider
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents BtnCerrar As Button
+    Friend WithEvents BtnCancelar As Button
     Friend WithEvents PCentarl As Panel
     Friend WithEvents PbxLogo As PictureBox
     Friend WithEvents LsvLugarTrabajo As ListView
-    Friend WithEvents ChIdNacionalidad As ColumnHeader
-    Friend WithEvents ChNacionalidad As ColumnHeader
+    Friend WithEvents ChIdLugarTrabajo As ColumnHeader
+    Friend WithEvents ChLugarTrabajo As ColumnHeader
     Friend WithEvents CmsOpciones As ContextMenuStrip
     Friend WithEvents ToolStripMenuItemEditar As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItemEliminar As ToolStripMenuItem
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents BtnCancelar As Button
-    Friend WithEvents BtnCerrar As Button
     Friend WithEvents BtnModificar As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents BtnNuevo As Button
-    Friend WithEvents TxtIdNacionalidad As TextBox
-    Friend WithEvents TxtNacionalidad As TextBox
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TxtLugarTrabajo As TextBox
+    Friend WithEvents TxtIdLugarTrabajo As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents EpMensaje As ErrorProvider
 End Class
