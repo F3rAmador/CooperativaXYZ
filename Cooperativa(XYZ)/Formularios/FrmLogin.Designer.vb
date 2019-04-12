@@ -180,6 +180,7 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.PbxLogo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmLogin"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4272719D-5952-43F2-A86E-46040B9A43A7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Cooperativa_XYZ_.My.MyApplication</StartupObject>
+    <StartupObject>Cooperativa_XYZ_.FrmLogin</StartupObject>
     <RootNamespace>Cooperativa_XYZ_</RootNamespace>
     <AssemblyName>Cooperativa%28XYZ%29</AssemblyName>
     <FileAlignment>512</FileAlignment>
