@@ -2,6 +2,7 @@
 
 Public Class FrmOficial
 
+
     Public Sub BtnCerrar_Click(sender As Object, e As EventArgs)
         Close()
     End Sub
@@ -309,4 +310,5 @@ Public Class FrmOficial
             TxtNumIdentidad.BackColor = Color.White
         End If
     End Sub
+
 End Class

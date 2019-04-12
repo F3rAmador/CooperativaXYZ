@@ -20,7 +20,7 @@ Partial Class FrmOficial
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -406,4 +406,5 @@ Partial Class FrmOficial
     Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TxtTelefono As MaskedTextBox
     Friend WithEvents TxtNumIdentidad As MaskedTextBox
+
 End Class
