@@ -98,6 +98,12 @@
     <Compile Include="Formularios\FrmOficial.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmPrincipalAdmin.Designer.vb">
+      <DependentUpon>FrmPrincipalAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPrincipalAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmSocio.Designer.vb">
       <DependentUpon>FrmSocio.vb</DependentUpon>
     </Compile>
@@ -149,6 +155,9 @@
     <EmbeddedResource Include="Formularios\FrmNacionalidad.resx">
       <DependentUpon>FrmNacionalidad.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPrincipalAdmin.resx">
+      <DependentUpon>FrmPrincipalAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmSocio.resx">
       <DependentUpon>FrmSocio.vb</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +204,29 @@
   <ItemGroup>
     <None Include="Resources\guardar-archivo-opcion.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\IconCargo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconNacionalidad %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconProfesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconLugarTrabajo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Socio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconOficial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconTipoCuenta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconFinalidadPrestamo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
