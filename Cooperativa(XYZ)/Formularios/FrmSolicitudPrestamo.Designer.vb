@@ -27,24 +27,27 @@ Partial Class FrmSolicitudPrestamo
         Me.ToolStripMenuItemEditar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItemEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TpSolicitudDePrestamo = New System.Windows.Forms.TabPage()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.TcOpciones = New System.Windows.Forms.TabControl()
+        Me.BtnSalir = New System.Windows.Forms.TabPage()
+        Me.BtnBuscarOficial = New System.Windows.Forms.Button()
+        Me.BtnBuscarSocio = New System.Windows.Forms.Button()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
+        Me.CboEstadoPrestamo = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtOficial = New System.Windows.Forms.TextBox()
+        Me.TxtPlazoPago = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TxtSumaOtorgada = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.TxtTasa = New System.Windows.Forms.TextBox()
+        Me.CboFinalidad = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TxtSocio = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.CboTipoPrestamo = New System.Windows.Forms.ComboBox()
+        Me.DtpFechaSolicitud = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnCancelar = New System.Windows.Forms.Button()
@@ -53,12 +56,14 @@ Partial Class FrmSolicitudPrestamo
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BtnNuevo = New System.Windows.Forms.Button()
-        Me.TxtIdTipoPrestamo = New System.Windows.Forms.TextBox()
+        Me.TxtNumeroSolicitud = New System.Windows.Forms.TextBox()
         Me.TpListadoDeSolicitudDePrestamo = New System.Windows.Forms.TabPage()
-        Me.LsvTipoPrestamo = New System.Windows.Forms.ListView()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.BtnSalir1 = New System.Windows.Forms.Button()
+        Me.LsvSolicitudPrestamo = New System.Windows.Forms.ListView()
         Me.ChNumSolicitud = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChFechaDeSolicitud = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ChTipoPrestamo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChSocio = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChPlazoDePago = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -67,14 +72,11 @@ Partial Class FrmSolicitudPrestamo
         Me.ChSumaOtorgada = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChOficial = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChEstadoPrestamo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.CmsOpciones.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.TpSolicitudDePrestamo.SuspendLayout()
+        Me.TcOpciones.SuspendLayout()
+        Me.BtnSalir.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TpListadoDeSolicitudDePrestamo.SuspendLayout()
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,69 +104,112 @@ Partial Class FrmSolicitudPrestamo
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GroupBox1.Controls.Add(Me.TabControl1)
+        Me.GroupBox1.Controls.Add(Me.TcOpciones)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(968, 456)
+        Me.GroupBox1.Size = New System.Drawing.Size(968, 469)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
         '
-        'TabControl1
+        'TcOpciones
         '
-        Me.TabControl1.Controls.Add(Me.TpSolicitudDePrestamo)
-        Me.TabControl1.Controls.Add(Me.TpListadoDeSolicitudDePrestamo)
-        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(968, 456)
-        Me.TabControl1.TabIndex = 14
+        Me.TcOpciones.Controls.Add(Me.BtnSalir)
+        Me.TcOpciones.Controls.Add(Me.TpListadoDeSolicitudDePrestamo)
+        Me.TcOpciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TcOpciones.Location = New System.Drawing.Point(0, 0)
+        Me.TcOpciones.Name = "TcOpciones"
+        Me.TcOpciones.SelectedIndex = 0
+        Me.TcOpciones.Size = New System.Drawing.Size(968, 463)
+        Me.TcOpciones.TabIndex = 0
         '
-        'TpSolicitudDePrestamo
+        'BtnSalir
         '
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.Button1)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.ComboBox3)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.Label10)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.Label9)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.TextBox5)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.TextBox2)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.Label6)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.TextBox4)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.Label8)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.Label7)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.TextBox3)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.ComboBox2)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.Label5)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.TextBox1)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.Label2)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.ComboBox1)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.DateTimePicker1)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.Label1)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.PictureBox1)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.BtnCancelar)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.BtnModificar)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.Label4)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.BtnGuardar)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.Label3)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.BtnNuevo)
-        Me.TpSolicitudDePrestamo.Controls.Add(Me.TxtIdTipoPrestamo)
-        Me.TpSolicitudDePrestamo.Location = New System.Drawing.Point(4, 27)
-        Me.TpSolicitudDePrestamo.Name = "TpSolicitudDePrestamo"
-        Me.TpSolicitudDePrestamo.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpSolicitudDePrestamo.Size = New System.Drawing.Size(960, 425)
-        Me.TpSolicitudDePrestamo.TabIndex = 0
-        Me.TpSolicitudDePrestamo.Text = "Datos de solicitud de préstamo"
-        Me.TpSolicitudDePrestamo.UseVisualStyleBackColor = True
+        Me.BtnSalir.Controls.Add(Me.BtnBuscarOficial)
+        Me.BtnSalir.Controls.Add(Me.BtnBuscarSocio)
+        Me.BtnSalir.Controls.Add(Me.BtnCerrar)
+        Me.BtnSalir.Controls.Add(Me.CboEstadoPrestamo)
+        Me.BtnSalir.Controls.Add(Me.Label10)
+        Me.BtnSalir.Controls.Add(Me.Label9)
+        Me.BtnSalir.Controls.Add(Me.TxtOficial)
+        Me.BtnSalir.Controls.Add(Me.TxtPlazoPago)
+        Me.BtnSalir.Controls.Add(Me.Label6)
+        Me.BtnSalir.Controls.Add(Me.TxtSumaOtorgada)
+        Me.BtnSalir.Controls.Add(Me.Label8)
+        Me.BtnSalir.Controls.Add(Me.Label7)
+        Me.BtnSalir.Controls.Add(Me.TxtTasa)
+        Me.BtnSalir.Controls.Add(Me.CboFinalidad)
+        Me.BtnSalir.Controls.Add(Me.Label5)
+        Me.BtnSalir.Controls.Add(Me.TxtSocio)
+        Me.BtnSalir.Controls.Add(Me.Label2)
+        Me.BtnSalir.Controls.Add(Me.CboTipoPrestamo)
+        Me.BtnSalir.Controls.Add(Me.DtpFechaSolicitud)
+        Me.BtnSalir.Controls.Add(Me.Label1)
+        Me.BtnSalir.Controls.Add(Me.PictureBox1)
+        Me.BtnSalir.Controls.Add(Me.BtnCancelar)
+        Me.BtnSalir.Controls.Add(Me.BtnModificar)
+        Me.BtnSalir.Controls.Add(Me.Label4)
+        Me.BtnSalir.Controls.Add(Me.BtnGuardar)
+        Me.BtnSalir.Controls.Add(Me.Label3)
+        Me.BtnSalir.Controls.Add(Me.BtnNuevo)
+        Me.BtnSalir.Controls.Add(Me.TxtNumeroSolicitud)
+        Me.BtnSalir.Location = New System.Drawing.Point(4, 27)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Padding = New System.Windows.Forms.Padding(3)
+        Me.BtnSalir.Size = New System.Drawing.Size(960, 432)
+        Me.BtnSalir.TabIndex = 0
+        Me.BtnSalir.Text = "Datos de solicitud de préstamo"
+        Me.BtnSalir.UseVisualStyleBackColor = True
         '
-        'ComboBox3
+        'BtnBuscarOficial
         '
-        Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(683, 306)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(206, 28)
-        Me.ComboBox3.TabIndex = 49
+        Me.BtnBuscarOficial.BackColor = System.Drawing.Color.Black
+        Me.BtnBuscarOficial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnBuscarOficial.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBuscarOficial.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnBuscarOficial.Location = New System.Drawing.Point(885, 234)
+        Me.BtnBuscarOficial.Name = "BtnBuscarOficial"
+        Me.BtnBuscarOficial.Size = New System.Drawing.Size(42, 29)
+        Me.BtnBuscarOficial.TabIndex = 52
+        Me.BtnBuscarOficial.Text = "..."
+        Me.BtnBuscarOficial.UseVisualStyleBackColor = False
+        '
+        'BtnBuscarSocio
+        '
+        Me.BtnBuscarSocio.BackColor = System.Drawing.Color.Black
+        Me.BtnBuscarSocio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnBuscarSocio.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBuscarSocio.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.BtnBuscarSocio.Location = New System.Drawing.Point(435, 236)
+        Me.BtnBuscarSocio.Name = "BtnBuscarSocio"
+        Me.BtnBuscarSocio.Size = New System.Drawing.Size(42, 29)
+        Me.BtnBuscarSocio.TabIndex = 51
+        Me.BtnBuscarSocio.Text = "..."
+        Me.BtnBuscarSocio.UseVisualStyleBackColor = False
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnCerrar.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.Location = New System.Drawing.Point(923, 7)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(37, 33)
+        Me.BtnCerrar.TabIndex = 50
+        Me.BtnCerrar.UseVisualStyleBackColor = False
+        '
+        'CboEstadoPrestamo
+        '
+        Me.CboEstadoPrestamo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboEstadoPrestamo.FormattingEnabled = True
+        Me.CboEstadoPrestamo.Location = New System.Drawing.Point(683, 306)
+        Me.CboEstadoPrestamo.Name = "CboEstadoPrestamo"
+        Me.CboEstadoPrestamo.Size = New System.Drawing.Size(206, 28)
+        Me.CboEstadoPrestamo.TabIndex = 49
         '
         'Label10
         '
@@ -188,21 +233,21 @@ Partial Class FrmSolicitudPrestamo
         Me.Label9.TabIndex = 47
         Me.Label9.Text = "Oficial"
         '
-        'TextBox5
+        'TxtOficial
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(683, 234)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(206, 29)
-        Me.TextBox5.TabIndex = 46
+        Me.TxtOficial.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtOficial.Location = New System.Drawing.Point(683, 234)
+        Me.TxtOficial.Name = "TxtOficial"
+        Me.TxtOficial.Size = New System.Drawing.Size(206, 29)
+        Me.TxtOficial.TabIndex = 46
         '
-        'TextBox2
+        'TxtPlazoPago
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(229, 306)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(206, 29)
-        Me.TextBox2.TabIndex = 45
+        Me.TxtPlazoPago.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPlazoPago.Location = New System.Drawing.Point(229, 306)
+        Me.TxtPlazoPago.Name = "TxtPlazoPago"
+        Me.TxtPlazoPago.Size = New System.Drawing.Size(206, 29)
+        Me.TxtPlazoPago.TabIndex = 45
         '
         'Label6
         '
@@ -215,13 +260,13 @@ Partial Class FrmSolicitudPrestamo
         Me.Label6.TabIndex = 44
         Me.Label6.Text = "Plazo de pago"
         '
-        'TextBox4
+        'TxtSumaOtorgada
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(683, 163)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(206, 29)
-        Me.TextBox4.TabIndex = 43
+        Me.TxtSumaOtorgada.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtSumaOtorgada.Location = New System.Drawing.Point(683, 163)
+        Me.TxtSumaOtorgada.Name = "TxtSumaOtorgada"
+        Me.TxtSumaOtorgada.Size = New System.Drawing.Size(206, 29)
+        Me.TxtSumaOtorgada.TabIndex = 43
         '
         'Label8
         '
@@ -245,22 +290,22 @@ Partial Class FrmSolicitudPrestamo
         Me.Label7.TabIndex = 41
         Me.Label7.Text = "Tasa de interés"
         '
-        'TextBox3
+        'TxtTasa
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(683, 89)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(206, 29)
-        Me.TextBox3.TabIndex = 40
+        Me.TxtTasa.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtTasa.Location = New System.Drawing.Point(683, 89)
+        Me.TxtTasa.Name = "TxtTasa"
+        Me.TxtTasa.Size = New System.Drawing.Size(206, 29)
+        Me.TxtTasa.TabIndex = 40
         '
-        'ComboBox2
+        'CboFinalidad
         '
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(683, 26)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(206, 28)
-        Me.ComboBox2.TabIndex = 39
+        Me.CboFinalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboFinalidad.FormattingEnabled = True
+        Me.CboFinalidad.Location = New System.Drawing.Point(683, 26)
+        Me.CboFinalidad.Name = "CboFinalidad"
+        Me.CboFinalidad.Size = New System.Drawing.Size(206, 28)
+        Me.CboFinalidad.TabIndex = 39
         '
         'Label5
         '
@@ -273,13 +318,13 @@ Partial Class FrmSolicitudPrestamo
         Me.Label5.TabIndex = 38
         Me.Label5.Text = "Finalidad del préstamo"
         '
-        'TextBox1
+        'TxtSocio
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(232, 236)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(206, 29)
-        Me.TextBox1.TabIndex = 34
+        Me.TxtSocio.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtSocio.Location = New System.Drawing.Point(232, 236)
+        Me.TxtSocio.Name = "TxtSocio"
+        Me.TxtSocio.Size = New System.Drawing.Size(206, 29)
+        Me.TxtSocio.TabIndex = 34
         '
         'Label2
         '
@@ -292,23 +337,23 @@ Partial Class FrmSolicitudPrestamo
         Me.Label2.TabIndex = 33
         Me.Label2.Text = "Socio"
         '
-        'ComboBox1
+        'CboTipoPrestamo
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(232, 164)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(206, 28)
-        Me.ComboBox1.TabIndex = 32
+        Me.CboTipoPrestamo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboTipoPrestamo.FormattingEnabled = True
+        Me.CboTipoPrestamo.Location = New System.Drawing.Point(232, 164)
+        Me.CboTipoPrestamo.Name = "CboTipoPrestamo"
+        Me.CboTipoPrestamo.Size = New System.Drawing.Size(206, 28)
+        Me.CboTipoPrestamo.TabIndex = 32
         '
-        'DateTimePicker1
+        'DtpFechaSolicitud
         '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(232, 100)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(206, 29)
-        Me.DateTimePicker1.TabIndex = 31
+        Me.DtpFechaSolicitud.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DtpFechaSolicitud.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFechaSolicitud.Location = New System.Drawing.Point(232, 100)
+        Me.DtpFechaSolicitud.Name = "DtpFechaSolicitud"
+        Me.DtpFechaSolicitud.Size = New System.Drawing.Size(206, 29)
+        Me.DtpFechaSolicitud.TabIndex = 31
         '
         'Label1
         '
@@ -326,7 +371,7 @@ Partial Class FrmSolicitudPrestamo
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.LogoCooperativa
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(715, 351)
+        Me.PictureBox1.Location = New System.Drawing.Point(715, 358)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(245, 71)
         Me.PictureBox1.TabIndex = 29
@@ -408,46 +453,80 @@ Partial Class FrmSolicitudPrestamo
         Me.BtnNuevo.TabIndex = 25
         Me.BtnNuevo.UseVisualStyleBackColor = True
         '
-        'TxtIdTipoPrestamo
+        'TxtNumeroSolicitud
         '
-        Me.TxtIdTipoPrestamo.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TxtIdTipoPrestamo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TxtIdTipoPrestamo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtIdTipoPrestamo.Location = New System.Drawing.Point(232, 33)
-        Me.TxtIdTipoPrestamo.Name = "TxtIdTipoPrestamo"
-        Me.TxtIdTipoPrestamo.ReadOnly = True
-        Me.TxtIdTipoPrestamo.Size = New System.Drawing.Size(206, 29)
-        Me.TxtIdTipoPrestamo.TabIndex = 23
+        Me.TxtNumeroSolicitud.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtNumeroSolicitud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtNumeroSolicitud.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtNumeroSolicitud.Location = New System.Drawing.Point(232, 33)
+        Me.TxtNumeroSolicitud.Name = "TxtNumeroSolicitud"
+        Me.TxtNumeroSolicitud.ReadOnly = True
+        Me.TxtNumeroSolicitud.Size = New System.Drawing.Size(206, 29)
+        Me.TxtNumeroSolicitud.TabIndex = 23
         '
         'TpListadoDeSolicitudDePrestamo
         '
         Me.TpListadoDeSolicitudDePrestamo.Controls.Add(Me.TextBox6)
         Me.TpListadoDeSolicitudDePrestamo.Controls.Add(Me.Label11)
-        Me.TpListadoDeSolicitudDePrestamo.Controls.Add(Me.Button2)
-        Me.TpListadoDeSolicitudDePrestamo.Controls.Add(Me.LsvTipoPrestamo)
+        Me.TpListadoDeSolicitudDePrestamo.Controls.Add(Me.BtnSalir1)
+        Me.TpListadoDeSolicitudDePrestamo.Controls.Add(Me.LsvSolicitudPrestamo)
         Me.TpListadoDeSolicitudDePrestamo.Location = New System.Drawing.Point(4, 27)
         Me.TpListadoDeSolicitudDePrestamo.Name = "TpListadoDeSolicitudDePrestamo"
         Me.TpListadoDeSolicitudDePrestamo.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpListadoDeSolicitudDePrestamo.Size = New System.Drawing.Size(960, 425)
+        Me.TpListadoDeSolicitudDePrestamo.Size = New System.Drawing.Size(960, 432)
         Me.TpListadoDeSolicitudDePrestamo.TabIndex = 1
         Me.TpListadoDeSolicitudDePrestamo.Text = "Listado de solicitudes de préstamo"
         Me.TpListadoDeSolicitudDePrestamo.UseVisualStyleBackColor = True
         '
-        'LsvTipoPrestamo
+        'TextBox6
         '
-        Me.LsvTipoPrestamo.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChNumSolicitud, Me.ChFechaDeSolicitud, Me.ChTipoPrestamo, Me.ChSocio, Me.ChPlazoDePago, Me.ChFinalidadDelPrestamo, Me.ChTasa, Me.ChSumaOtorgada, Me.ChOficial, Me.ChEstadoPrestamo})
-        Me.LsvTipoPrestamo.ContextMenuStrip = Me.CmsOpciones
-        Me.LsvTipoPrestamo.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LsvTipoPrestamo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LsvTipoPrestamo.FullRowSelect = True
-        Me.LsvTipoPrestamo.GridLines = True
-        Me.LsvTipoPrestamo.HideSelection = False
-        Me.LsvTipoPrestamo.Location = New System.Drawing.Point(3, 79)
-        Me.LsvTipoPrestamo.Name = "LsvTipoPrestamo"
-        Me.LsvTipoPrestamo.Size = New System.Drawing.Size(954, 343)
-        Me.LsvTipoPrestamo.TabIndex = 14
-        Me.LsvTipoPrestamo.UseCompatibleStateImageBehavior = False
-        Me.LsvTipoPrestamo.View = System.Windows.Forms.View.Details
+        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(362, 29)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(206, 29)
+        Me.TextBox6.TabIndex = 53
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(273, 32)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(68, 24)
+        Me.Label11.TabIndex = 52
+        Me.Label11.Text = "Buscar"
+        '
+        'BtnSalir1
+        '
+        Me.BtnSalir1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnSalir1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BtnSalir1.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
+        Me.BtnSalir1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnSalir1.FlatAppearance.BorderSize = 0
+        Me.BtnSalir1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnSalir1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSalir1.Location = New System.Drawing.Point(922, 8)
+        Me.BtnSalir1.Name = "BtnSalir1"
+        Me.BtnSalir1.Size = New System.Drawing.Size(37, 33)
+        Me.BtnSalir1.TabIndex = 51
+        Me.BtnSalir1.UseVisualStyleBackColor = False
+        '
+        'LsvSolicitudPrestamo
+        '
+        Me.LsvSolicitudPrestamo.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChNumSolicitud, Me.ChFechaDeSolicitud, Me.ChTipoPrestamo, Me.ChSocio, Me.ChPlazoDePago, Me.ChFinalidadDelPrestamo, Me.ChTasa, Me.ChSumaOtorgada, Me.ChOficial, Me.ChEstadoPrestamo})
+        Me.LsvSolicitudPrestamo.ContextMenuStrip = Me.CmsOpciones
+        Me.LsvSolicitudPrestamo.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.LsvSolicitudPrestamo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LsvSolicitudPrestamo.FullRowSelect = True
+        Me.LsvSolicitudPrestamo.GridLines = True
+        Me.LsvSolicitudPrestamo.HideSelection = False
+        Me.LsvSolicitudPrestamo.Location = New System.Drawing.Point(3, 86)
+        Me.LsvSolicitudPrestamo.Name = "LsvSolicitudPrestamo"
+        Me.LsvSolicitudPrestamo.Size = New System.Drawing.Size(954, 343)
+        Me.LsvSolicitudPrestamo.TabIndex = 14
+        Me.LsvSolicitudPrestamo.UseCompatibleStateImageBehavior = False
+        Me.LsvSolicitudPrestamo.View = System.Windows.Forms.View.Details
         '
         'ChNumSolicitud
         '
@@ -458,10 +537,6 @@ Partial Class FrmSolicitudPrestamo
         '
         Me.ChFechaDeSolicitud.Text = "Fecha de solicitud"
         Me.ChFechaDeSolicitud.Width = 150
-        '
-        'EpMensaje
-        '
-        Me.EpMensaje.ContainerControl = Me
         '
         'ChTipoPrestamo
         '
@@ -503,54 +578,9 @@ Partial Class FrmSolicitudPrestamo
         Me.ChEstadoPrestamo.Text = "Estadó de Préstamo"
         Me.ChEstadoPrestamo.Width = 150
         '
-        'Button1
+        'EpMensaje
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button1.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(923, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(37, 33)
-        Me.Button1.TabIndex = 50
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button2.BackgroundImage = Global.Cooperativa_XYZ_.My.Resources.Resources.IconCerrar
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(922, 1)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(37, 33)
-        Me.Button2.TabIndex = 51
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(273, 32)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(68, 24)
-        Me.Label11.TabIndex = 52
-        Me.Label11.Text = "Buscar"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(362, 29)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(206, 29)
-        Me.TextBox6.TabIndex = 53
+        Me.EpMensaje.ContainerControl = Me
         '
         'FrmSolicitudPrestamo
         '
@@ -563,9 +593,9 @@ Partial Class FrmSolicitudPrestamo
         Me.Text = "Form1"
         Me.CmsOpciones.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
-        Me.TabControl1.ResumeLayout(False)
-        Me.TpSolicitudDePrestamo.ResumeLayout(False)
-        Me.TpSolicitudDePrestamo.PerformLayout()
+        Me.TcOpciones.ResumeLayout(False)
+        Me.BtnSalir.ResumeLayout(False)
+        Me.BtnSalir.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TpListadoDeSolicitudDePrestamo.ResumeLayout(False)
         Me.TpListadoDeSolicitudDePrestamo.PerformLayout()
@@ -578,38 +608,38 @@ Partial Class FrmSolicitudPrestamo
     Friend WithEvents CmsOpciones As ContextMenuStrip
     Friend WithEvents ToolStripMenuItemEditar As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItemEliminar As ToolStripMenuItem
-    Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TpSolicitudDePrestamo As TabPage
+    Friend WithEvents TcOpciones As TabControl
+    Friend WithEvents BtnSalir As TabPage
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnModificar As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents BtnNuevo As Button
-    Friend WithEvents TxtIdTipoPrestamo As TextBox
+    Friend WithEvents TxtNumeroSolicitud As TextBox
     Friend WithEvents TpListadoDeSolicitudDePrestamo As TabPage
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents CboEstadoPrestamo As ComboBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtOficial As TextBox
+    Friend WithEvents TxtPlazoPago As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TxtSumaOtorgada As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents TxtTasa As TextBox
+    Friend WithEvents CboFinalidad As ComboBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtSocio As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents CboTipoPrestamo As ComboBox
+    Friend WithEvents DtpFechaSolicitud As DateTimePicker
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents LsvTipoPrestamo As ListView
+    Friend WithEvents LsvSolicitudPrestamo As ListView
     Friend WithEvents ChNumSolicitud As ColumnHeader
     Friend WithEvents ChFechaDeSolicitud As ColumnHeader
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnCerrar As Button
     Friend WithEvents ChTipoPrestamo As ColumnHeader
     Friend WithEvents ChSocio As ColumnHeader
     Friend WithEvents ChPlazoDePago As ColumnHeader
@@ -618,7 +648,9 @@ Partial Class FrmSolicitudPrestamo
     Friend WithEvents ChSumaOtorgada As ColumnHeader
     Friend WithEvents ChOficial As ColumnHeader
     Friend WithEvents ChEstadoPrestamo As ColumnHeader
-    Friend WithEvents Button2 As Button
+    Friend WithEvents BtnSalir1 As Button
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label11 As Label
+    Friend WithEvents BtnBuscarOficial As Button
+    Friend WithEvents BtnBuscarSocio As Button
 End Class

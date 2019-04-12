@@ -74,10 +74,70 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Connection.vb" />
-    <Compile Include="Formularios\FrmCuentaSocio.Designer.vb">
-      <DependentUpon>FrmCuentaSocio.vb</DependentUpon>
+    <Compile Include="Formularios\BuscarOficiall.Designer.vb">
+      <DependentUpon>BuscarOficiall.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmCuentaSocio.vb">
+    <Compile Include="Formularios\BuscarOficiall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarSocioo.Designer.vb">
+      <DependentUpon>BuscarSocioo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarSocioo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmBuscarTipoPrestamo.Designer.vb">
+      <DependentUpon>FrmBuscarTipoPrestamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmBuscarTipoPrestamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmFinalidadPrestamo.Designer.vb">
+      <DependentUpon>FrmFinalidadPrestamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmFinalidadPrestamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmLugarTrabajo.Designer.vb">
+      <DependentUpon>FrmLugarTrabajo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmLugarTrabajo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmNacionalidad.Designer.vb">
+      <DependentUpon>FrmNacionalidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmNacionalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmOficial.Designer.vb">
+      <DependentUpon>FrmOficial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmOficial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPrincipalAdmin.Designer.vb">
+      <DependentUpon>FrmPrincipalAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPrincipalAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistroDePrestamo.Designer.vb">
+      <DependentUpon>FrmRegistroDePrestamo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistroDePrestamo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmSocio.Designer.vb">
+      <DependentUpon>FrmSocio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmSocio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmSolicitudPrestamo.Designer.vb">
@@ -108,10 +168,40 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="test1.Designer.vb">
+      <DependentUpon>test1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test1.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formularios\FrmCuentaSocio.resx">
-      <DependentUpon>FrmCuentaSocio.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmBuscarTipoPrestamo.resx">
+      <DependentUpon>FrmBuscarTipoPrestamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmFinalidadPrestamo.resx">
+      <DependentUpon>FrmFinalidadPrestamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmLugarTrabajo.resx">
+      <DependentUpon>FrmLugarTrabajo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmNacionalidad.resx">
+      <DependentUpon>FrmNacionalidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmOficial.resx">
+      <DependentUpon>FrmOficial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPrincipalAdmin.resx">
+      <DependentUpon>FrmPrincipalAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmRegistroDePrestamo.resx">
+      <DependentUpon>FrmRegistroDePrestamo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmSocio.resx">
+      <DependentUpon>FrmSocio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmSolicitudPrestamo.resx">
       <DependentUpon>FrmSolicitudPrestamo.vb</DependentUpon>
@@ -156,6 +246,50 @@
   <ItemGroup>
     <None Include="Resources\guardar-archivo-opcion.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\IconCargo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconNacionalidad %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconProfesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconLugarTrabajo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Socio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconOficial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconTipoCuenta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconFinalidadPrestamo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconMinimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconUsuario %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AgregarDatosBD2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconCerrar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconBuscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconSolictudPresta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-contactos-64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

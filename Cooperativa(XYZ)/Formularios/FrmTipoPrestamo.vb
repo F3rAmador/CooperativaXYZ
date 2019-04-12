@@ -7,7 +7,8 @@ Public Class FrmTipoPrestamo
     End Sub
 
     Private Sub FrmTipoPrestamo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LsvTipoPrestamo.Visible = False
+        LsvTipoPrestamo.Visible = True
+        MostrarTodo()
     End Sub
 
     'Private Sub PCentarl_MouseHover(sender As Object, e As EventArgs) Handles PCentarl.MouseHover
@@ -35,15 +36,7 @@ Public Class FrmTipoPrestamo
 
     'End Sub
 
-    Private Sub ChkVer_CheckedChanged(sender As Object, e As EventArgs) Handles ChkVer.CheckedChanged
 
-        If ChkVer.CheckState = CheckState.Checked Then
-            LsvTipoPrestamo.Visible = True
-            MostrarTodo()
-        Else
-            LsvTipoPrestamo.Visible = False
-        End If
-    End Sub
 
     Private Sub HabilitarBotones(ByVal Nuevo As Boolean, ByVal Guardar As Boolean, ByVal Modificar As Boolean, ByVal Cancelar As Boolean, ByVal Salir As Boolean)
         BtnNuevo.Enabled = Nuevo
@@ -56,6 +49,8 @@ Public Class FrmTipoPrestamo
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
         HabilitarBotones(False, True, False, True, True)
+        TxtTipoPrestamo.ReadOnly = False
+        TxtTipoPrestamo.Focus()
         InvestigarCorrelativo()
 
     End Sub
@@ -122,10 +117,10 @@ Public Class FrmTipoPrestamo
             ListarTipoPrestamoR = ListarTIpoPrestamo.ExecuteReader()
 
             If ListarTipoPrestamoR.Read = True Then
-                If ListarTipoPrestamoR("CorrelativoTabla") Is DBNull.Value Then
+                If ListarTipoPrestamoR("IdTabla") Is Nothing Then
                     TxtIdTipoPrestamo.Text = 1
                 Else
-                    TxtIdTipoPrestamo.Text = ListarTipoPrestamoR("CorrelativoTabla").ToString + 1
+                    TxtIdTipoPrestamo.Text = ListarTipoPrestamoR("IdTabla").ToString + 1
                 End If
             End If
 
@@ -276,6 +271,7 @@ Public Class FrmTipoPrestamo
 
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
         HabilitarBotones(True, False, False, False, True)
+        TxtTipoPrestamo.ReadOnly = True
         Limpiar()
 
     End Sub
@@ -284,7 +280,7 @@ Public Class FrmTipoPrestamo
         Close()
     End Sub
 
-    Private Sub Nacionalidad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub TipoPrestamo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         HabilitarBotones(True, False, False, False, True)
     End Sub
 
@@ -293,5 +289,31 @@ Public Class FrmTipoPrestamo
         TxtIdTipoPrestamo.Text = LsvTipoPrestamo.FocusedItem.SubItems(0).Text
         TxtTipoPrestamo.Text = LsvTipoPrestamo.FocusedItem.SubItems(1).Text
     End Sub
+
+
+    Private Sub PCentarl_MouseHover(sender As Object, e As EventArgs) Handles PCentral.MouseHover
+        FrmPrincipalAdmin.PUsuario.Visible = False
+        FrmPrincipalAdmin.PanelSub2.Visible = False
+        FrmPrincipalAdmin.PanelSub3.Visible = False
+        FrmPrincipalAdmin.PanelSub4.Visible = False
+        Do While FrmPrincipalAdmin.PMenu.Width > 9
+            FrmPrincipalAdmin.PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+    End Sub
+
+    Private Sub GroupBox1_MouseHover(sender As Object, e As EventArgs) Handles GroupBox1.MouseHover
+        FrmPrincipalAdmin.PUsuario.Visible = False
+        FrmPrincipalAdmin.PanelSub2.Visible = False
+        FrmPrincipalAdmin.PanelSub3.Visible = False
+        FrmPrincipalAdmin.PanelSub4.Visible = False
+        Do While FrmPrincipalAdmin.PMenu.Width > 9
+            FrmPrincipalAdmin.PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+    End Sub
+
 
 End Class
