@@ -23,7 +23,7 @@ Partial Class FrmTipoPrestamo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.PCentarl = New System.Windows.Forms.Panel()
+        Me.PCentral = New System.Windows.Forms.Panel()
         Me.PbxLogo = New System.Windows.Forms.PictureBox()
         Me.LsvTipoPrestamo = New System.Windows.Forms.ListView()
         Me.ChIdPrestamo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -42,23 +42,23 @@ Partial Class FrmTipoPrestamo
         Me.TxtIdTipoPrestamo = New System.Windows.Forms.TextBox()
         Me.TxtTipoPrestamo = New System.Windows.Forms.TextBox()
         Me.EpMensaje = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.PCentarl.SuspendLayout()
+        Me.PCentral.SuspendLayout()
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsOpciones.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'PCentarl
+        'PCentral
         '
-        Me.PCentarl.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.PCentarl.Controls.Add(Me.PbxLogo)
-        Me.PCentarl.Controls.Add(Me.LsvTipoPrestamo)
-        Me.PCentarl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PCentarl.Location = New System.Drawing.Point(0, 165)
-        Me.PCentarl.Name = "PCentarl"
-        Me.PCentarl.Size = New System.Drawing.Size(968, 303)
-        Me.PCentarl.TabIndex = 16
+        Me.PCentral.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.PCentral.Controls.Add(Me.PbxLogo)
+        Me.PCentral.Controls.Add(Me.LsvTipoPrestamo)
+        Me.PCentral.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PCentral.Location = New System.Drawing.Point(0, 165)
+        Me.PCentral.Name = "PCentral"
+        Me.PCentral.Size = New System.Drawing.Size(968, 303)
+        Me.PCentral.TabIndex = 16
         '
         'PbxLogo
         '
@@ -256,12 +256,12 @@ Partial Class FrmTipoPrestamo
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(968, 468)
-        Me.Controls.Add(Me.PCentarl)
+        Me.Controls.Add(Me.PCentral)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmTipoPrestamo"
         Me.Text = "Form1"
-        Me.PCentarl.ResumeLayout(False)
+        Me.PCentral.ResumeLayout(False)
         CType(Me.PbxLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsOpciones.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
@@ -271,7 +271,7 @@ Partial Class FrmTipoPrestamo
 
     End Sub
 
-    Friend WithEvents PCentarl As Panel
+    Friend WithEvents PCentral As Panel
     Friend WithEvents PbxLogo As PictureBox
     Friend WithEvents LsvTipoPrestamo As ListView
     Friend WithEvents ChIdPrestamo As ColumnHeader

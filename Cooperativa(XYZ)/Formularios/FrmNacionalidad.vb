@@ -260,4 +260,19 @@ Public Class FrmNacionalidad
         TxtNacionalidad.Text = LsvLugarTrabajo.FocusedItem.SubItems(1).Text
     End Sub
 
+    Private Sub PCentarl_Paint(sender As Object, e As PaintEventArgs) Handles PCentarl.Paint
+        Do While FrmPrincipalAdmin.PMenu.Width > 9
+            FrmPrincipalAdmin.PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+        Do While FrmPrincipalAdmin.PMenu.Width > 9
+            FrmPrincipalAdmin.PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+    End Sub
 End Class

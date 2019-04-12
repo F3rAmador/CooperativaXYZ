@@ -260,4 +260,23 @@ Public Class FrmFinalidadPrestamo
         TxtFinalidad.Text = LsvFinalidad.FocusedItem.SubItems(1).Text
     End Sub
 
+
+
+    Private Sub PCentarl_MouseHover(sender As Object, e As EventArgs) Handles PCentarl.MouseHover
+        Do While FrmPrincipalAdmin.PMenu.Width > 9
+            FrmPrincipalAdmin.PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+    End Sub
+
+
+
+    Private Sub GroupBox1_MouseHover(sender As Object, e As EventArgs) Handles GroupBox1.MouseHover
+        Do While FrmPrincipalAdmin.PMenu.Width > 9
+            FrmPrincipalAdmin.PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+    End Sub
 End Class

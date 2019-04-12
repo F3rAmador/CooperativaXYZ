@@ -155,6 +155,9 @@
     <EmbeddedResource Include="Formularios\FrmNacionalidad.resx">
       <DependentUpon>FrmNacionalidad.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmOficial.resx">
+      <DependentUpon>FrmOficial.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPrincipalAdmin.resx">
       <DependentUpon>FrmPrincipalAdmin.vb</DependentUpon>
     </EmbeddedResource>

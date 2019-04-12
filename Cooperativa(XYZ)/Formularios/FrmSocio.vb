@@ -496,4 +496,21 @@ Public Class FrmSocio
         End If
         Return Estado
     End Function
+
+    Private Sub TpDatosSocio_MouseHover(sender As Object, e As EventArgs) Handles TpDatosSocio.MouseHover
+        Do While FrmPrincipalAdmin.PMenu.Width > 9
+            FrmPrincipalAdmin.PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+    End Sub
+
+
+    Private Sub TpListadoDeSolicitudDelSocio_MouseHover(sender As Object, e As EventArgs) Handles TpListadoDeSolicitudDelSocio.MouseHover
+        Do While FrmPrincipalAdmin.PMenu.Width > 9
+            FrmPrincipalAdmin.PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+    End Sub
 End Class
