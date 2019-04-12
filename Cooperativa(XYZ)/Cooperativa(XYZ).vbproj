@@ -74,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Connection.vb" />
+    <Compile Include="Formularios\FrmCuentaSocio.Designer.vb">
+      <DependentUpon>FrmCuentaSocio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCuentaSocio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmSolicitudPrestamo.Designer.vb">
       <DependentUpon>FrmSolicitudPrestamo.vb</DependentUpon>
     </Compile>
@@ -104,6 +110,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\FrmCuentaSocio.resx">
+      <DependentUpon>FrmCuentaSocio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmSolicitudPrestamo.resx">
       <DependentUpon>FrmSolicitudPrestamo.vb</DependentUpon>
     </EmbeddedResource>
