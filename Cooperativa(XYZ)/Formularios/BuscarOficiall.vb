@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
+Public Class BuscarOficiall
 
-Public Class FrmBuscarOficial
+
 
     Private Sub MostrarTodo()
         If Cn.State = ConnectionState.Open Then
@@ -64,6 +65,7 @@ Public Class FrmBuscarOficial
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Close()
     End Sub
+
 
 
 End Class

@@ -74,6 +74,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Connection.vb" />
+    <Compile Include="Formularios\BuscarOficiall.Designer.vb">
+      <DependentUpon>BuscarOficiall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarOficiall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscarSocioo.Designer.vb">
+      <DependentUpon>BuscarSocioo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\BuscarSocioo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmBuscarTipoPrestamo.Designer.vb">
       <DependentUpon>FrmBuscarTipoPrestamo.vb</DependentUpon>
     </Compile>
