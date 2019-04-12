@@ -147,7 +147,7 @@ Public Class FrmNacionalidad
                     .CommandType = CommandType.StoredProcedure
                     .Connection = Cn
 
-                    .Parameters.Add("@Nacionalidad", SqlDbType.NVarChar, 30).Value = TxtNacionalidad.Text
+                    .Parameters.Add("@Nacionalidad", SqlDbType.NVarChar, 50).Value = TxtNacionalidad.Text
                     .ExecuteNonQuery()
 
                     MessageBox.Show("Registro almacenado satisfactoriamente.", "Cooperativa XYZ", MessageBoxButtons.OK, MessageBoxIcon.Information)
