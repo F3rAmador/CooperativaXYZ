@@ -19,13 +19,16 @@
     Private Sub PMenu_MouseHover(sender As Object, e As EventArgs) Handles PMenu.MouseHover
         PbxIngresar.Visible = False
         PbxUsuario.Visible = False
+        PbxSolicitudPrestamo.Visible = False
+        PbxCuentaSocio.Visible = False
         Do While PMenu.Width < 81
             PMenu.Width += 5
             System.Threading.Thread.Sleep(10)
         Loop
         PbxIngresar.Visible = True
         PbxUsuario.Visible = True
-
+        PbxSolicitudPrestamo.Visible = True
+        PbxCuentaSocio.Visible = True
     End Sub
 
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -139,7 +142,7 @@
         InsertarFormularioEnPanel(New FrmOficial)
     End Sub
 
-    Private Sub PbxTipoCuenta_Click(sender As Object, e As EventArgs) Handles PbxTipoCuenta.Click
+    Private Sub PbxTipoCuenta_Click(sender As Object, e As EventArgs)
         PUsuario.Visible = False
         PanelSub2.Visible = False
         PanelSub3.Visible = False
@@ -150,8 +153,8 @@
             ' PbxAlimento.Visible = False
         Loop
         EstadoIngresar = True
-        ' LblTitulo.Text = "TIPO DE CUENTA"
-        ' InsertarFormularioEnPanel(New Frm)
+        LblTitulo.Text = "TIPO DE CUENTA"
+        InsertarFormularioEnPanel(New FrmTipoCuenta)
     End Sub
 
     Private Sub PbxFinalidadPrestamo_Click(sender As Object, e As EventArgs) Handles PbxFinalidadPrestamo.Click
@@ -180,7 +183,19 @@
     End Sub
 
     Private Sub PbxSolicitudPrestamo_Click(sender As Object, e As EventArgs) Handles PbxSolicitudPrestamo.Click
+        PUsuario.Visible = False
+        PanelSub2.Visible = False
+        PanelSub3.Visible = False
+        PanelSub4.Visible = False
+        Do While PMenu.Width > 9
+            PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+        EstadoIngresar = True
         LblTitulo.Text = "SOLICITUD DE PRÉSTAMO"
         InsertarFormularioEnPanel(New FrmSolicitudPrestamo)
     End Sub
+
+
 End Class

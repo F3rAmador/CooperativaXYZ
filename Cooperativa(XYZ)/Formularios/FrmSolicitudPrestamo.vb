@@ -328,7 +328,31 @@ Public Class FrmSolicitudPrestamo
 
     End Sub
 
-    Private Sub ToolStripMenuItemEliminar_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItemEliminar.Click
 
+
+
+
+    Private Sub BtnSalir_MouseHover(sender As Object, e As EventArgs) Handles BtnSalir.MouseHover
+        FrmPrincipalAdmin.PUsuario.Visible = False
+        FrmPrincipalAdmin.PanelSub2.Visible = False
+        FrmPrincipalAdmin.PanelSub3.Visible = False
+        FrmPrincipalAdmin.PanelSub4.Visible = False
+        Do While FrmPrincipalAdmin.PMenu.Width > 9
+            FrmPrincipalAdmin.PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+    End Sub
+
+    Private Sub TpListadoDeSolicitudDePrestamo_MouseHover(sender As Object, e As EventArgs) Handles TpListadoDeSolicitudDePrestamo.MouseHover
+        FrmPrincipalAdmin.PUsuario.Visible = False
+        FrmPrincipalAdmin.PanelSub2.Visible = False
+        FrmPrincipalAdmin.PanelSub3.Visible = False
+        FrmPrincipalAdmin.PanelSub4.Visible = False
+        Do While FrmPrincipalAdmin.PMenu.Width > 9
+            FrmPrincipalAdmin.PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
     End Sub
 End Class
