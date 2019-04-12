@@ -180,6 +180,16 @@
     End Sub
 
     Private Sub PbxSolicitudPrestamo_Click(sender As Object, e As EventArgs) Handles PbxSolicitudPrestamo.Click
+        PUsuario.Visible = False
+        PanelSub2.Visible = False
+        PanelSub3.Visible = False
+        PanelSub4.Visible = False
+        Do While PMenu.Width > 9
+            PMenu.Width -= 5
+            System.Threading.Thread.Sleep(10)
+            ' PbxAlimento.Visible = False
+        Loop
+        EstadoIngresar = True
         LblTitulo.Text = "SOLICITUD DE PRÉSTAMO"
         InsertarFormularioEnPanel(New FrmSolicitudPrestamo)
     End Sub
